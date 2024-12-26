@@ -196,6 +196,7 @@
     <rect x="10" y="20" width="380" height="80" fill="#fff" stroke="#000" stroke-width="3"/>
     <text x="200" y="75" text-anchor="middle" font-family="Lucida Sans" font-size="48" font-weight="bold" style="letter-spacing: -2px;">DOUGTONE</text>
     <text x="200" y="100" text-anchor="middle" font-family="Times New Roman" font-size="14">INTERNATIONAL ELECTRONICS CORPORATION</text>
+    <p></p>
   </svg>
 
   <div class="marquee blink">
@@ -478,14 +479,6 @@
 
 <script>
 if (window.innerWidth > 640) {}
-document.body.style.visibility = 'hidden';
-setTimeout(function () {
-  alert("INITIALIZING DOUGTONE WEBVISION PROTOCOLS...");
-  setTimeout(function () {
-    alert("ESTABLISHING CORPORATE HANDSHAKE...");
-    document.body.style.visibility = 'visible';
-  }, 2000);
-}, 1000);
 let visitorCount = Math.floor(Math.random() * 1000) + 1;
 document.querySelector('.footer').innerHTML = `
   <p>©1964 DOUGTONE ELECTRONICS CORPORATION - A DIVISION OF CONSOLIDATED DOUG INDUSTRIES INTERNATIONAL</p>
