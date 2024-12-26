@@ -1,0 +1,157 @@
+<html><head><base href="."><meta charset="UTF-8">
+<style>
+body {
+  background: #000;
+  font-family: "Courier New", monospace;
+  margin: 0;
+  padding: 20px;
+  color: #00ff00;
+}
+
+.container {
+  max-width: 1000px;
+  margin: 0 auto;
+  border: 2px solid #00ff00;
+  padding: 20px;
+  background: #001100;
+}
+
+.logo {
+  width: 400px;
+  height: 120px;
+  margin: 0 auto;
+  display: block;
+}
+
+.blink {
+  animation: blink 1s infinite;
+}
+
+@keyframes blink {
+  50% { opacity: 0; }
+}
+
+h1 {
+  text-align: center;
+  color: #ff0000;
+  border-bottom: 2px solid #ff0000;
+  padding-bottom: 10px;
+}
+
+.confidential-banner {
+  background: #ff0000;
+  color: white;
+  padding: 20px;
+  text-align: center;
+  font-weight: bold;
+  margin: 20px 0;
+  border: 2px solid #fff;
+  animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+  0% { background: #ff0000; }
+  50% { background: #990000; }
+  100% { background: #ff0000; }
+}
+
+.memo {
+  border: 1px solid #00ff00;
+  margin: 20px 0;
+  padding: 15px;
+  background: #002200;
+}
+
+.memo h3 {
+  color: #ff0000;
+  margin-top: 0;
+}
+
+.warning {
+  background: #ffff00;
+  color: #000;
+  padding: 10px;
+  margin: 10px 0;
+  text-align: center;
+  font-weight: bold;
+}
+
+.footer {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 2px solid #00ff00;
+  padding-top: 20px;
+}
+
+.logout-btn {
+  background: #ff0000;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  cursor: pointer;
+  float: right;
+}
+</style>
+</head>
+<body>
+
+<div class="container">
+  <button class="logout-btn" onclick="window.location.href='index.html'">LOGOUT</button>
+  
+  <svg class="logo" viewBox="0 0 400 120">
+    <rect x="10" y="20" width="380" height="80" fill="none" stroke="#ff0000" stroke-width="3"/>
+    <text x="200" y="75" text-anchor="middle" font-family="Courier New" font-size="48" font-weight="bold" fill="#ff0000">DOUGTONE</text>
+    <text x="200" y="100" text-anchor="middle" font-family="Courier New" font-size="14" fill="#ff0000">HUMAN RESOURCES DIVISION</text>
+  </svg>
+
+  <div class="confidential-banner">
+    TOP SECRET - DOUGTONE CONFIDENTIAL<br>
+    HUMAN RESOURCES CONTROL CENTER<br>
+    CLEARANCE LEVEL 2 REQUIRED<br>
+    UNAUTHORIZED ACCESS WILL RESULT IN IMMEDIATE DOUGMIND™ RECONDITIONING
+  </div>
+
+  <div class="warning">
+    NOTICE: All employees must submit to mandatory DougWave™ Consciousness Scanning before viewing these documents
+  </div>
+
+  <div class="memo">
+    <h3>URGENT: Employee Thought Compliance Initiative</h3>
+    <p>DATE: 06/17/1964</p>
+    <p>Recent DougMind™ scans indicate a 23% increase in independent thinking during work hours. Effective immediately, all employees must wear DougThink™ Cognitive Compliance Helmets during their shifts. Helmet removal is strictly prohibited and will result in immediate termination (from both employment and consciousness).</p>
+    <p>- H. Wilson, Director of Thought Compliance</p>
+  </div>
+
+  <div class="memo">
+    <h3>MEMO: Mandatory Fun Hour Expansion</h3>
+    <p>DATE: 06/16/1964</p>
+    <p>The daily Mandatory Fun Hour will now be expanded to three hours. Employees must demonstrate appropriate levels of corporate-approved joy or face DougSpirit™ Enhancement Therapy. Remember: Happy Workers are Productive Workers!</p>
+    <p>- J. Thompson, Director of Enforced Morale</p>
+  </div>
+
+  <div class="memo">
+    <h3>NOTICE: Coffee Ration Elimination</h3>
+    <p>DATE: 06/15/1964</p>
+    <p>All coffee privileges have been revoked following discovery of unauthorized employee alertness. Approved stimulation will now be provided exclusively through mandatory DougStim™ Neural Interface Patches.</p>
+    <p>- R. Davis, Beverage Control Administrator</p>
+  </div>
+
+  <div class="memo">
+    <h3>ALERT: Dream Monitoring Program</h3>
+    <p>DATE: 06/14/1964</p>
+    <p>The new DougDream™ Surveillance System has detected multiple employees experiencing non-work-related dreams. All employees must now use company-issued DougRest™ Sleep Regulation Devices. Dreams about competitor products will result in immediate disciplinary action.</p>
+    <p>- M. Johnson, Subconscious Compliance Officer</p>
+  </div>
+
+  <div class="warning">
+    REMINDER: The Employee Suggestion Box has been permanently sealed following last month's "incident." All ideas must now be submitted directly to the DougThink™ Cognitive Control Center for proper filtering and employee tracking.
+  </div>
+
+  <div class="footer">
+    <p>©1964 DOUGTONE HUMAN RESOURCES DIVISION</p>
+    <p>MONITORING YOUR THOUGHTS FOR A MORE PRODUCTIVE TOMORROW</p>
+    <p class="blink">YOUR COMPLIANCE IS MANDATORY</p>
+  </div>
+</div>
+
+</body></html>
