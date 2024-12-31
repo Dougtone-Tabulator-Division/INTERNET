@@ -1,0 +1,616 @@
+<html><head><base href="https://grandjudiciaryofdoug.gov">
+<meta charset="UTF-8">
+<title>Doug Process | GRAND JUDICIARY OF DOUG</title>
+<style>
+  :root {
+    --primary-color: #14213D;
+    --accent-color: #8B0000;
+    --gold: #94734E;
+  }
+
+  * {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+
+  body {
+    font-family: "Times New Roman", serif;
+    background: #f5f5f5;
+    color: #333;
+  }
+
+  .header {
+    background: var(--primary-color);
+    padding: 1rem;
+    border-bottom: 5px solid var(--gold);
+  }
+
+  .logo {
+    width: 150px;
+    height: 150px;
+    margin: 0 auto;
+    display: block;
+  }
+
+  .title {
+    text-align: center;
+    color: white;
+    font-size: 2.5rem;
+    margin: 1rem 0;
+    text-transform: uppercase;
+    letter-spacing: 2px;
+  }
+
+  .motto {
+    text-align: center;
+    color: var(--gold);
+    font-style: italic;
+    font-size: 1.2rem;
+    margin-bottom: 1rem;
+  }
+
+  .nav {
+    background: #2b2b2b;
+    padding: 1rem;
+  }
+
+  .nav-list {
+    display: flex;
+    justify-content: center;
+    list-style: none;
+    gap: 2rem;
+    flex-wrap: wrap;
+  }
+
+  .nav-list a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+  }
+
+  .nav-list a:hover {
+    color: var(--gold);
+  }
+
+  .main-content {
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    gap: 2rem;
+    margin: 2rem auto;
+    padding: 0 2rem;
+  }
+
+  .sidebar {
+    background: var(--primary-color);
+    color: white;
+    padding: 1.5rem;
+    border-radius: 4px;
+    position: sticky;
+    top: 2rem;
+    height: fit-content;
+  }
+
+  .sidebar-nav {
+    list-style: none;
+  }
+
+  .sidebar-nav li {
+    margin: 1rem 0;
+  }
+
+  .sidebar-nav a {
+    color: white;
+    text-decoration: none;
+    display: block;
+    padding: 0.5rem;
+    transition: all 0.2s;
+  }
+
+  .sidebar-nav a:hover {
+    background: var(--gold);
+    border-radius: 4px;
+  }
+
+  .content-area {
+    background: white;
+    padding: 2rem;
+    border-radius: 4px;
+    box-shadow: 0 2px 4px rgba(0,0,0,0.1);
+  }
+
+  .process-section {
+    border: none;
+    margin-bottom: 3rem;
+  }
+
+  .process-step {
+    border-radius: 4px;
+    margin-bottom: 2rem;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+  }
+
+  .timeline {
+    margin-left: 2rem;
+  }
+
+  .timeline-item {
+    background: white;
+    padding: 1.5rem;
+    border-radius: 4px;
+    box-shadow: 0 1px 3px rgba(0,0,0,0.1);
+    margin-bottom: 2rem;
+  }
+
+  .form-requirement {
+    background: #f8f9fa;
+    border-radius: 4px;
+    border: 1px solid #e9ecef;
+  }
+
+  .warning-box {
+    border-radius: 4px;
+    background: linear-gradient(45deg, var(--gold), var(--accent-color));
+    color: white;
+    padding: 1rem;
+    margin: 1rem 0;
+  }
+
+  .important-notice {
+    border-radius: 4px;
+    margin: 0 0 2rem 0;
+    background: linear-gradient(45deg, var(--gold), var(--accent-color));
+    color: white;
+    padding: 1rem;
+  }
+
+  .footer {
+    background: var(--primary-color);
+    color: white;
+    padding: 2rem;
+    text-align: center;
+  }
+
+  .bureaucratic-number {
+    font-family: monospace;
+    color: #666;
+    font-size: 0.8rem;
+  }
+
+  @keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.8; }
+    100% { opacity: 1; }
+  }
+
+  .important-notice {
+    animation: pulse 2s infinite;
+  }
+</style>
+</head>
+<body>
+  <header class="header">
+    <img src="/PRESIDING INQUISITOR.png" alt="Grand Judiciary Seal" class="logo">
+    <h1 class="title">Grand Judiciary of Doug</h1>
+    <div class="motto">Justia Omnibus</div>
+  </header>
+
+  <nav class="nav">
+    <ul class="nav-list">
+      <li><a href="https://grandjudiciaryofdoug.gov/about">About</a></li>
+      <li><a href="https://grandjudiciaryofdoug.gov/meetdoug">Meet Doug</a></li>
+      <li><a href="https://grandjudiciaryofdoug.gov/opinions">Opinions</a></li>
+      <li><a href="https://grandjudiciaryofdoug.gov/dougprocess">Doug Process</a></li>
+      <li><a href="https://grandjudiciaryofdoug.gov/forms">Forms</a></li>
+      <li><a href="https://grandjudiciaryofdoug.gov/library">Law Library</a></li>
+      <li><a href="https://grandjudiciaryofdoug.gov/dougmarshal">Office of the Dougmarshal General</a></li>
+      <li><a href="https://grandjudiciaryofdoug.gov/inquisitor">Office of the Presiding Inquisitor</a></li>
+    </ul>
+  </nav>
+
+  <main class="main-content">
+    <aside class="sidebar">
+      <nav>
+        <ul class="sidebar-nav">
+          <li><a href="#civil-cases">Civil Cases</a></li>
+          <li><a href="#criminal-cases">Criminal Cases</a></li>
+          <li><a href="#supreme-court">Doug Supreme Court</a></li>
+          <li><a href="#circuit-courts">Circuit Courts</a></li>
+          <li><a href="#special">Special Considerations</a></li>
+          <li><a href="#emergency">Emergency Process</a></li>
+        </ul>
+      </nav>
+    </aside>
+    
+    <div class="content-area">
+      <div class="important-notice">
+        NOTICE: Failure to follow Doug Process exactly as prescribed constitutes a Class D Violation (Maximum Penalty: Perpetual Form Filing)
+      </div>
+
+      <section class="process-section">
+        <h2 id="civil-cases">Understanding Doug Process</h2>
+        <p>Doug Process refers to the constitutionally mandated procedures by which citizens may formally petition Doug Supreme for the adjudication of grievances, provided said grievances have been pre-approved via Form D-103 (&quot;Application for Grievance Recognition&quot;).</p>
+        
+        <div class="process-step">
+          <h3>Civil-Class Cases</h3>
+          <p>Civil disputes between Dougizens follow the Standard Civil Doug Process:</p>
+          
+          <h4>Step 1: Initial Filing</h4>
+          <div class="form-requirement">
+            Required Initial Forms:
+            <ul>
+              <li>Form D-300: &quot;Petition to Initiate Civil Doug Proceedings&quot;</li>
+              <li>Form D-301: &quot;Acknowledgment of Doug&apos;s Civil Authority&quot;</li>
+              <li>Form D-302: &quot;Waiver of Right to Non-Doug Resolution&quot;</li>
+            </ul>
+          </div>
+
+          <h4>Step 2: Circuit Court Proceedings</h4>
+          <ul>
+            <li>Preliminary Doug Hearing (Form D-303: &quot;Request for Doug&apos;s Attention&quot;)</li>
+            <li>Discovery Phase (Form D-304: &quot;Permission to Discover Facts&quot;)</li>
+            <li>Circuit Doug Arguments (Form D-305: &quot;Application to Make Arguments&quot;)</li>
+            <li>Circuit Doug Decision (Form D-306: &quot;Acceptance of Doug&apos;s Wisdom&quot;)</li>
+          </ul>
+
+          <h4>Step 3: Appeals Process</h4>
+          <ul>
+            <li>File Notice of Appeal (Form D-307)</li>
+            <li>Submit Appeal Brief (Form D-308)</li>
+            <li>Wait for Circuit Doug&apos;s Permission to Appeal (Form D-309)</li>
+          </ul>
+
+          <h4>Petitioning Doug Supreme</h4>
+          <div class="warning-box">
+            &#x26a0;&#xfe0f; WARNING: Doug Supreme accepts fewer than 1% of petitions, usually only those involving Doug-related constitutional issues.
+          </div>
+          <div class="form-requirement">
+            Writ of Certiorari Requirements:
+            <ul>
+              <li>Form D-050: &quot;Humble Petition for Doug&apos;s Supreme Attention&quot;</li>
+              <li>Form D-051: &quot;Acknowledgment of Doug&apos;s Ultimate Wisdom&quot;</li>
+              <li>Form D-052: &quot;Statement of Doug-worthiness&quot;</li>
+              <li>Form D-053: &quot;Nine Copies of All Previous Doug Forms&quot;</li>
+            </ul>
+          </div>
+
+          <p>Civil cases are categorized by Doug Severity Levels:</p>
+          <ul>
+            <li>Level 1: Minor Doug Disputes (e.g., disagreements over Doug memorabilia)</li>
+            <li>Level 2: Moderate Doug Conflicts (e.g., violations of Doug&apos;s Dress Code)</li>
+            <li>Level 3: Serious Doug Infractions (e.g., unauthorized Doug impersonation)</li>
+          </ul>
+        </div>
+
+        <div class="process-step">
+          <h3 id="criminal-cases">Criminal-Class Cases</h3>
+          <p>Criminal cases in Doug Jurisdiction are prosecuted by the Office of the Presiding Inquisitor and follow Enhanced Doug Protocol:</p>
+          
+          <div class="timeline">
+            <div class="timeline-item">
+              <h4>Step 1: Evidentiary Jury Indictment</h4>
+              <p>A Doug-certified jury reviews evidence to determine if criminal charges are warranted</p>
+              <div class="form-requirement">
+                Required Forms:
+                <ul>
+                  <li>Form D-200: &quot;Request for Evidentiary Jury&quot;</li>
+                  <li>Form D-201: &quot;Evidence Pre-Submission Authorization&quot;</li>
+                  <li>Form D-202: &quot;Jury Doug-Worthiness Verification&quot;</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <h4>Step 2: Probable Cause Conference</h4>
+              <p>Initial hearing to establish Doug-probable cause for prosecution</p>
+              <div class="form-requirement">
+                Required Forms:
+                <ul>
+                  <li>Form D-203: &quot;Probable Cause Assessment Request&quot;</li>
+                  <li>Form D-204: &quot;Conference Scheduling Petition&quot;</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <h4>Step 3: Preliminary Examination</h4>
+              <p>Detailed review of evidence and testimony before a Doug Circuit Judge</p>
+              <div class="form-requirement">
+                Required Forms:
+                <ul>
+                  <li>Form D-205: &quot;Preliminary Examination Authorization&quot;</li>
+                  <li>Form D-206: &quot;Evidence Presentation Schedule&quot;</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <h4>Step 4: Guilt Jury Selection (If applicable)</h4>
+              <p>Selection of Doug-approved jurors for trial proceedings</p>
+              <div class="form-requirement">
+                Required Forms:
+                <ul>
+                  <li>Form D-207: &quot;Jury Selection Request&quot;</li>
+                  <li>Form D-208: &quot;Juror Doug Loyalty Assessment&quot;</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <h4>Step 5: Trial Phase</h4>
+              <p>Formal criminal proceedings before Doug Circuit Court</p>
+              <div class="form-requirement">
+                Required Forms:
+                <ul>
+                  <li>Form D-209: &quot;Trial Authorization Request&quot;</li>
+                  <li>Form D-210: &quot;Daily Trial Proceedings Schedule&quot;</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <h4>Step 6: Verdict</h4>
+              <p>Official determination of guilt by jury or Doug Circuit Judge</p>
+              <div class="form-requirement">
+                Required Forms:
+                <ul>
+                  <li>Form D-211: &quot;Verdict Recording Authorization&quot;</li>
+                  <li>Form D-212: &quot;Guilt Assessment Documentation&quot;</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <h4>Step 7: Sentencing</h4>
+              <p>Determination and pronouncement of Doug-approved punishment</p>
+              <div class="form-requirement">
+                Required Forms:
+                <ul>
+                  <li>Form D-213: &quot;Sentencing Request Form&quot;</li>
+                  <li>Form D-214: &quot;Punishment Authorization&quot;</li>
+                </ul>
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <h4>Step 8: Commitment Processing</h4>
+              <p>Transfer to either the Dougmarshal General or Doug Penitentiary System</p>
+              <div class="form-requirement">
+                Required Forms:
+                <ul>
+                  <li>Form D-215: &quot;Commitment Processing Request&quot;</li>
+                  <li>Form D-216: &quot;Facility Assignment Authorization&quot;</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="warning-box">
+            &#x26a0;&#xfe0f; WARNING: Criminal cases may result in sentences including mandatory Doug appreciation seminars and extended Form filing duties.
+          </div>
+
+          <div class="form-requirement">
+            Required Criminal Process Forms:
+            <ul>
+              <li>Form D-200: &quot;Acknowledgment of Criminal Doug Jurisdiction&quot;</li>
+              <li>Form D-201: &quot;Waiver of Non-Doug Rights&quot;</li>
+              <li>Form D-202: &quot;Confession of Doug Transgressions&quot; (Must be filed regardless of guilt)</li>
+            </ul>
+          </div>
+
+          <p>Criminal Classifications:</p>
+          <ul>
+            <li>Class A: Hauptdougkrim (Most serious Doug offenses)</li>
+            <li>Class B: Major Doug Violations</li>
+            <li>Class C: Standard Doug Infractions</li>
+            <li>Class D: Minor Doug Transgressions</li>
+          </ul>
+        </div>
+
+        <div class="process-step">
+          <h3 id="supreme-court">Doug Supreme Court Process</h3>
+          <div class="timeline">
+            <div class="timeline-item">
+              <h4>Phase 1: Preliminary Review</h4>
+              <p>Doug&apos;s law clerks review petitions while Doug naps. Clerks must:</p>
+              <ul>
+                <li>Complete Form D-054: &quot;Clerk&apos;s Petition Assessment&quot;</li>
+                <li>File Form D-055: &quot;Doug&apos;s Nap Schedule Compliance&quot;</li>
+                <li>Submit Form D-056: &quot;Case Interest Rating for Doug&quot;</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h4>Phase 2: Doug&apos;s Conference</h4>
+              <p>Doug confers with himself about which cases deserve his attention through:</p>
+              <ul>
+                <li>Morning Self-Conference (Form D-057: &quot;AM Doug Dialogue&quot;)</li>
+                <li>Afternoon Meditation (Form D-058: &quot;PM Doug Contemplation&quot;)</li>
+                <li>Evening Case Selection (Form D-059: &quot;Doug&apos;s Daily Docket&quot;)</li>
+              </ul>
+              <div class="warning-box">
+                Note: Doug requires absolute silence during conferences with himself
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <h4>Phase 3: Oral Arguments</h4>
+              <p>Attorneys must present arguments while Doug interrupts with random questions about their personal lives. Required preparations:</p>
+              <div class="form-requirement">
+                Pre-Argument Forms:
+                <ul>
+                  <li>Form D-060: &quot;Personal History Disclosure&quot;</li>
+                  <li>Form D-061: &quot;Interesting Anecdote Preparation&quot;</li>
+                  <li>Form D-062: &quot;Doug Entertainment Guarantee&quot;</li>
+                </ul>
+              </div>
+              <p>During arguments, attorneys must:</p>
+              <ul>
+                <li>Maintain Doug-approved posture</li>
+                <li>Laugh at all Doug&apos;s jokes (Form D-063: &quot;Humor Appreciation&quot;)</li>
+                <li>Answer all personal questions truthfully (Form D-064: &quot;Personal Query Response&quot;)</li>
+              </ul>
+            </div>
+
+            <div class="timeline-item">
+              <h4>Phase 4: Doug&apos;s Decision</h4>
+              <p>Doug contemplates the case while feeding his goldfish, then issues a binding opinion through:</p>
+              <div class="form-requirement">
+                Decision Process Forms:
+                <ul>
+                  <li>Form D-065: &quot;Goldfish Consultation Record&quot;</li>
+                  <li>Form D-066: &quot;Doug&apos;s Divine Inspiration Log&quot;</li>
+                  <li>Form D-067: &quot;Official Opinion Publication Request&quot;</li>
+                </ul>
+              </div>
+              <p>Possible outcomes include:</p>
+              <ul>
+                <li>Full Doug Approval</li>
+                <li>Partial Doug Endorsement</li>
+                <li>Doug Disapproval</li>
+                <li>Doug Abstention (rare, occurs only during goldfish feeding emergencies)</li>
+              </ul>
+              <div class="warning-box">
+                All Doug Supreme decisions are final unless Doug changes his mind
+              </div>
+            </div>
+
+            <div class="timeline-item">
+              <h4>Phase 5: Implementation</h4>
+              <p>Doug&apos;s decisions must be implemented through:</p>
+              <ul>
+                <li>Official Publication (Form D-068)</li>
+                <li>Judicial Notice Distribution (Form D-069)</li>
+                <li>Doug Compliance Verification (Form D-070)</li>
+              </ul>
+              <div class="form-requirement">
+                Post-Decision Requirements:
+                <ul>
+                  <li>All parties must acknowledge Doug&apos;s wisdom (Form D-071)</li>
+                  <li>Submit implementation timeline (Form D-072)</li>
+                  <li>Schedule mandatory Doug appreciation ceremony (Form D-073)</li>
+                </ul>
+              </div>
+            </div>
+          </div>
+
+          <div class="warning-box">
+            Failure to properly appreciate Doug&apos;s judicial wisdom may result in additional form filing requirements
+          </div>
+        </div>
+
+        <div class="timeline">
+          <h3 id="circuit-courts">Circuit Court Doug Process Timeline:</h3>
+          
+          <div class="timeline-item">
+            <h4>Step 1: Initial Hearing</h4>
+            <div class="form-requirement">
+              Required Forms:
+              <ul>
+                <li>Form D-100: &quot;Application for Permission to Submit an Application&quot;</li>
+                <li>Form D-101: &quot;Application for Permission to Submit Form D-100&quot;</li>
+                <li>Form D-102: &quot;Declaration of Intent to File Form D-101&quot;</li>
+              </ul>
+            </div>
+            <p>Initial hearing before Circuit Doug to determine if case meets minimum Doug-worthiness standards</p>
+          </div>
+
+          <div class="timeline-item">
+            <h4>Step 2: Discovery Phase</h4>
+            <p>Parties must submit all evidence for Doug&apos;s review. All documents must be duplicated in triplicate and notarized by a Doug-certified notary.</p>
+            <div class="form-requirement">
+              Required Forms:
+              <ul>
+                <li>Form D-103: &quot;Permission to Gather Evidence&quot;</li>
+                <li>Form D-104: &quot;Evidence Pre-Approval Request&quot;</li>
+                <li>Form D-105: &quot;Evidence Submission Authorization&quot;</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <h4>Step 3: Pre-Trial Conference</h4>
+            <p>Meeting with Circuit Doug to establish trial parameters and Doug-compliant argument procedures.</p>
+            <div class="warning-box">
+              Note: All conference participants must maintain proper Doug-approved posture throughout proceedings.
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <h4>Step 4: Trial Phase</h4>
+            <p>Formal presentation of arguments before Circuit Doug. All statements must be pre-approved via Form D-891 (&quot;Application to Speak&quot;).</p>
+            <div class="form-requirement">
+              Required Trial Forms:
+              <ul>
+                <li>Form D-106: &quot;Daily Trial Permission Request&quot;</li>
+                <li>Form D-107: &quot;Argument Presentation Schedule&quot;</li>
+                <li>Form D-108: &quot;Doug Attention Maintenance Fee&quot;</li>
+              </ul>
+            </div>
+          </div>
+
+          <div class="timeline-item">
+            <h4>Step 5: Circuit Doug Deliberation</h4>
+            <p>Circuit Doug will consider the case while completing mandatory Doug-approved activities (paperwork filing, rubber stamp maintenance, etc.)</p>
+          </div>
+
+          <div class="timeline-item">
+            <h4>Step 6: Verdict and Sentencing</h4>
+            <p>Circuit Doug&apos;s decision will be revealed through the traditional reading of Form D-99 (&quot;Official Doug Circuit Proclamation&quot;)</p>
+            <div class="warning-box">
+              Appeals must be filed within 3 Doug Business Days (as measured by Doug&apos;s personal sundial)
+            </div>
+          </div>
+        </div>
+
+        <div class="process-step">
+          <h3 id="special">Special Considerations</h3>
+          <ul>
+            <li>All proceedings must occur during officially sanctioned Doug Hours (as determined daily by Doug&apos;s circadian rhythms)</li>
+            <li>Participants must demonstrate proficiency in Doug-Speak (Form D-123: &quot;Language Compatibility Assessment&quot;)</li>
+            <li>All arguments must be presented in a manner that amuses Doug</li>
+            <li>Criminal cases require additional Doug-approved counsel (Form D-LAW: &quot;Application for Doug-Licensed Attorney&quot;)</li>
+          </ul>
+        </div>
+
+        <div class="warning-box" id="emergency">
+          <h3>Emergency Doug Process</h3>
+          <p>In cases of extreme urgency (as defined in Doug Code Section 47.B: &quot;Things Doug Considers Urgent&quot;), participants may file Form D-911 (&quot;Emergency Doug Intervention Request&quot;). Note: Misuse of Emergency Doug Process may result in mandatory attendance at Doug&apos;s quarterly slideshow of vacation photos.</p>
+        </div>
+      </section>
+    </div>
+  </main>
+
+  <footer class="footer">
+    <p> 2023 Grand Judiciary of Doug | All Rights Reserved (By Order of Doug)</p>
+    <p class="bureaucratic-number">PROCESS-D-1984-OMEGA-COMPLY</p>
+  </footer>
+
+  <script>document.addEventListener('DOMContentLoaded', function () {
+  document.querySelectorAll('.sidebar-nav a').forEach(anchor => {
+    anchor.addEventListener('click', function (e) {
+      e.preventDefault();
+      const section = document.querySelector(this.getAttribute('href'));
+      section.scrollIntoView({
+        behavior: 'smooth'
+      });
+    });
+  });
+  window.addEventListener('scroll', () => {
+    const sections = document.querySelectorAll('.process-section');
+    const navLinks = document.querySelectorAll('.sidebar-nav a');
+    sections.forEach(section => {
+      const sectionTop = section.offsetTop;
+      const sectionHeight = section.clientHeight;
+      if (window.pageYOffset >= sectionTop - 100 && window.pageYOffset < sectionTop + sectionHeight - 100) {
+        const correspondingLink = document.querySelector(`.sidebar-nav a[href="#${section.id}"]`);
+        if (correspondingLink) {
+          navLinks.forEach(link => link.style.background = 'transparent');
+          correspondingLink.style.background = 'var(--gold)';
+        }
+      }
+    });
+  });
+});</script>
+</body></html>
