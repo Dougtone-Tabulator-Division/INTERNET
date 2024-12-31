@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Admin System | Court Records Archive</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header class="header">
+        <h1>Admin System for Court Records Archive</h1>
+    </header>
+
+    <nav class="nav">
+        <ul class="nav-list">
+            <li><a href="../../index.html">Home</a></li>
+            <li><a href="../../about.html">About</a></li>
+            <li><a href="../../meetdoug.html">Meet Doug</a></li>
+            <li><a href="../../opinions.html">Opinions</a></li>
+            <li><a href="../../dougprocess.html">Doug Process</a></li>
+            <li><a href="../../forms.html">Forms</a></li>
+            <li><a href="../../library.html">Law Library</a></li>
+            <li><a href="../../dougmarshal.html">Office of the Dougmarshal General</a></li>
+            <li><a href="../../inquisitor.html">Office of the Presiding Inquisitor</a></li>
+            <li><a href="../../docket.html">Interactive Docket System</a></li>
+        </ul>
+    </nav>
+
+    <main class="main-content">
+        <section class="form-section">
+            <h2>Add a New Case</h2>
+            <form id="case-form">
+                <label for="case-number">Case Number:</label>
+                <input type="text" id="case-number" name="case-number" required>
+                <label for="case-name">Case Name:</label>
+                <input type="text" id="case-name" name="case-name" required>
+                <label for="case-description">Description:</label>
+                <textarea id="case-description" name="case-description" required></textarea>
+                <button type="submit">Add Case</button>
+            </form>
+        </section>
+
+        <section class="pull-section">
+            <h2>Pull Case Details from Docket System</h2>
+            <button id="pull-button">Pull Case Details</button>
+        </section>
+
+        <section class="confirmation-section">
+            <h2>Confirmation</h2>
+            <p id="confirmation-message"></p>
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>© 2023 Grand Judiciary of Doug | All Rights Reserved (By Order of Doug)</p>
+        <p class="bureaucratic-number">ADMIN-VERSION-D-1984-OMEGA-COMPLY</p>
+    </footer>
+
+    <script src="scripts.js"></script>
+</body>
+</html>
