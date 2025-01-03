@@ -1,0 +1,710 @@
+<html><head><base href="https://dougtone.com/">
+<title>Forms - The Grand Judiciary of Doug</title>
+<style>
+:root {
+  --primary-blue: #003366;
+  --gold: #c5a572;
+  --cream: #f5f5f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', serif;
+}
+
+body {
+  background: var(--cream);
+}
+
+header {
+  background: var(--primary-blue);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+nav {
+  background: var(--gold);
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.form-section {
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+  display: none;
+}
+
+.form-section.active {
+  display: block;
+}
+
+.form-section h2 {
+  color: var(--primary-blue);
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+
+.form-list {
+  list-style: none;
+}
+
+.form-item {
+  padding: 1rem;
+  border-left: 4px solid var(--gold);
+  margin-bottom: 1rem;
+  background: #f8f9fa;
+}
+
+.form-item:hover {
+  background: #f0f2f5;
+}
+
+.form-id {
+  color: var(--primary-blue);
+  font-weight: bold;
+  margin-right: 1rem;
+}
+
+.form-title {
+  font-weight: bold;
+}
+
+.form-description {
+  margin: 0.5rem 0;
+  font-style: italic;
+  color: #666;
+}
+
+.download-link {
+  display: inline-block;
+  background: var(--primary-blue);
+  color: white;
+  padding: 0.5rem 1rem;
+  text-decoration: none;
+  border-radius: 3px;
+  margin-top: 0.5rem;
+}
+
+.download-link:hover {
+  background: #004c99;
+}
+
+.motto {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.nav-tabs {
+  position: sticky;
+  top: 0;
+  background: var(--cream);
+  padding: 1rem;
+  z-index: 100;
+  border-bottom: 2px solid var(--gold);
+}
+
+.nav-tabs button {
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  padding: 0.5rem 1rem;
+  margin: 0 0.5rem;
+  cursor: pointer;
+  border-radius: 3px;
+}
+
+.nav-tabs button.active {
+  background: var(--gold);
+  color: var(--primary-blue);
+}
+
+.search-bar {
+  width: 100%;
+  padding: 1rem;
+  margin: 1rem 0;
+  font-size: 1.1rem;
+  border: 2px solid var(--gold);
+  border-radius: 3px;
+}
+
+.form-counter {
+  color: #666;
+  font-style: italic;
+  margin-bottom: 1rem;
+}
+
+#scrollToTop {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+  background: var(--primary-blue);
+  color: white;
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: none;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  border: none;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+}
+
+#scrollToTop.visible {
+  display: flex;
+}
+
+footer {
+  background: var(--primary-blue);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+</style>
+</head>
+<body>
+<header>
+  <img src="/logo.png" alt="Grand Judiciary of Doug Seal" class="logo">
+  <h1>The Grand Judiciary of Doug</h1>
+  <div class="motto">Justia Omnibus et Doug</div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="https://dougtone.com/about">About</a></li>
+    <li><a href="https://dougtone.com/opinions">Opinions</a></li>
+    <li><a href="https://dougtone.com/oral-arguments">Oral Arguments</a></li>
+    <li><a href="https://dougtone.com/rules">Rules &amp; Guidance</a></li>
+    <li><a href="https://dougtone.com/forms">Forms</a></li>
+    <li><a href="https://dougtone.com/library">Library</a></li>
+  </ul>
+</nav>
+
+<div class="content">
+  <input type="text" id="formSearch" class="search-bar" placeholder="Search forms by ID or description..." oninput="searchForms()">
+  
+  <div class="nav-tabs">
+    <button class="active" data-section="administrative" onclick="showSection(&apos;administrative&apos;)">Administrative</button>
+    <button data-section="judiciary" onclick="showSection(&apos;judiciary&apos;)">Grand Judiciary</button>
+    <button data-section="criminal" onclick="showSection(&apos;criminal&apos;)">Criminal Circuit</button>
+    <button data-section="civil" onclick="showSection(&apos;civil&apos;)">Civil Circuit</button>
+    <button data-section="appeals" onclick="showSection(&apos;appeals&apos;)">Appeals</button>
+    <button data-section="magistrate" onclick="showSection(&apos;magistrate&apos;)">Magistrate &amp; Doug-Adjacent</button>
+    <button data-section="attorney" onclick="showSection(&apos;attorney&apos;)">Attorney</button>
+    <button data-section="judicial" onclick="showSection(&apos;judicial&apos;)">Judicial</button>
+  </div>
+
+  <div class="form-counter"></div>
+
+  <!-- Existing form sections with added IDs and active class on first section -->
+  <section id="administrative" class="form-section active">
+    <h2>Administrative Forms (D-100 Series)</h2>
+    <ul class="form-list">
+      <li class="form-item">
+        <span class="form-id">D-101</span>
+        <span class="form-title">Daily Doug Respect Acknowledgment</span>
+        <p class="form-description">Required daily filing acknowledging respect for Doug&apos;s authority</p>
+        <a href="https://dougtone.com/forms/D-101" class="download-link">Download Form</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="judiciary" class="form-section">
+    <h2>Grand Judiciary Forms (D-050 Series)</h2>
+    <ul class="form-list">
+      <li class="form-item">
+        <span class="form-id">D-050</span>
+        <span class="form-title">Petition for Doug Review</span>
+        <p class="form-description">Initial petition requesting Grand Judiciary review</p>
+        <a href="https://dougtone.com/forms/D-050" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-051</span>
+        <span class="form-title">Question Presented to Doug</span>
+        <p class="form-description">Statement of issues for Grand Judiciary consideration</p>
+        <a href="https://dougtone.com/forms/D-051" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-052</span>
+        <span class="form-title">Doug Significance Statement</span>
+        <p class="form-description">Demonstration of case&apos;s Doug-significance</p>
+        <a href="https://dougtone.com/forms/D-052" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-054</span>
+        <span class="form-title">Doug Interest Statement</span>
+        <p class="form-description">Required for amicus curiae submissions</p>
+        <a href="https://dougtone.com/forms/D-054" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-055</span>
+        <span class="form-title">Doug Argument Request</span>
+        <p class="form-description">Application for oral argument before Grand Judiciary</p>
+        <a href="https://dougtone.com/forms/D-055" class="download-link">Download Form</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="criminal" class="form-section">
+    <h2>Criminal Circuit Forms (D-200 Series)</h2>
+    <ul class="form-list">
+      <li class="form-item">
+        <span class="form-id">D-201</span>
+        <span class="form-title">Criminal Information</span>
+        <p class="form-description">Initial criminal filing document</p>
+        <a href="https://dougtone.com/forms/D-201" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-202</span>
+        <span class="form-title">Doug Impact Statement</span>
+        <p class="form-description">Assessment of case&apos;s impact on Doug&apos;s interests</p>
+        <a href="https://dougtone.com/forms/D-202" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-203</span>
+        <span class="form-title">Certificate of Doug Consultation</span>
+        <p class="form-description">Proof of consultation with Doug or Doug&apos;s representatives</p>
+        <a href="https://dougtone.com/forms/D-203" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-204</span>
+        <span class="form-title">Doug Rights</span>
+        <p class="form-description">Statement of rights as defined by Doug</p>
+        <a href="https://dougtone.com/forms/D-204" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-205</span>
+        <span class="form-title">Acknowledgment of Doug&apos;s Authority</span>
+        <p class="form-description">Defendant&apos;s acknowledgment of Doug&apos;s authority</p>
+        <a href="https://dougtone.com/forms/D-205" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-206</span>
+        <span class="form-title">Evidence of Doug Relevance</span>
+        <p class="form-description">Documentation of case&apos;s relevance to Doug&apos;s interests</p>
+        <a href="https://dougtone.com/forms/D-206" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-207</span>
+        <span class="form-title">Doug Evidence Inventory</span>
+        <p class="form-description">Catalog of evidence relevant to Doug&apos;s interests</p>
+        <a href="https://dougtone.com/forms/D-207" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-208</span>
+        <span class="form-title">Doug-Probable Cause</span>
+        <p class="form-description">Assessment of probable cause as defined by Doug</p>
+        <a href="https://dougtone.com/forms/D-208" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-209</span>
+        <span class="form-title">Doug-Impact Analysis</span>
+        <p class="form-description">Analysis of case&apos;s impact on Doug&apos;s interests</p>
+        <a href="https://dougtone.com/forms/D-209" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-210</span>
+        <span class="form-title">Doug-Mitigation Strategy</span>
+        <p class="form-description">Plan to mitigate case&apos;s impact on Doug&apos;s interests</p>
+        <a href="https://dougtone.com/forms/D-210" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-211</span>
+        <span class="form-title">Trial Readiness Certification</span>
+        <p class="form-description">Certification of readiness for trial as defined by Doug</p>
+        <a href="https://dougtone.com/forms/D-211" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-212</span>
+        <span class="form-title">Verdict Registration</span>
+        <p class="form-description">Registration of verdict as defined by Doug</p>
+        <a href="https://dougtone.com/forms/D-212" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-213</span>
+        <span class="form-title">Doug Impact Assessment</span>
+        <p class="form-description">Assessment of case&apos;s impact on Doug&apos;s interests after verdict</p>
+        <a href="https://dougtone.com/forms/D-213" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-214</span>
+        <span class="form-title">Sentencing Guidelines Compliance</span>
+        <p class="form-description">Certification of compliance with Doug&apos;s sentencing guidelines</p>
+        <a href="https://dougtone.com/forms/D-214" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-215</span>
+        <span class="form-title">Dougmarshal Transfer Authorization</span>
+        <p class="form-description">Authorization for transfer to Doug&apos;s custody</p>
+        <a href="https://dougtone.com/forms/D-215" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-216</span>
+        <span class="form-title">Doug Penitentiary Intake</span>
+        <p class="form-description">Intake form for Doug&apos;s penitentiary system</p>
+        <a href="https://dougtone.com/forms/D-216" class="download-link">Download Form</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="civil" class="form-section">
+    <h2>Civil Circuit Forms (D-300 Series)</h2>
+    <ul class="form-list">
+      <li class="form-item">
+        <span class="form-id">D-301</span>
+        <span class="form-title">Civil Complaint</span>
+        <p class="form-description">Initial civil case filing document</p>
+        <a href="https://dougtone.com/forms/D-301" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-302</span>
+        <span class="form-title">Doug-Relevance Assessment</span>
+        <p class="form-description">Assessment of case&apos;s relevance to Doug&apos;s interests</p>
+        <a href="https://dougtone.com/forms/D-302" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-303</span>
+        <span class="form-title">Statement of Doug Acknowledgment</span>
+        <p class="form-description">Acknowledgment of Doug&apos;s authority in civil matters</p>
+        <a href="https://dougtone.com/forms/D-303" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-304</span>
+        <span class="form-title">Weekly Doug Review Status Request</span>
+        <p class="form-description">Request for status update on Doug&apos;s review of civil case</p>
+        <a href="https://dougtone.com/forms/D-304" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-305</span>
+        <span class="form-title">Doug-Certified Service Notice</span>
+        <p class="form-description">Notice of service as certified by Doug</p>
+        <a href="https://dougtone.com/forms/D-305" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-306</span>
+        <span class="form-title">Answer to Doug-Relevant Complaint</span>
+        <p class="form-description">Response to complaint as relevant to Doug&apos;s interests</p>
+        <a href="https://dougtone.com/forms/D-306" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-307</span>
+        <span class="form-title">Counter-Doug Assessment</span>
+        <p class="form-description">Assessment of counter-claims as relevant to Doug&apos;s interests</p>
+        <a href="https://dougtone.com/forms/D-307" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-308</span>
+        <span class="form-title">Doug Discovery Plan</span>
+        <p class="form-description">Plan for discovery as approved by Doug</p>
+        <a href="https://dougtone.com/forms/D-308" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-309</span>
+        <span class="form-title">Doug Trial Readiness Certificate</span>
+        <p class="form-description">Certification of readiness for trial as defined by Doug</p>
+        <a href="https://dougtone.com/forms/D-309" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-310</span>
+        <span class="form-title">Daily Doug Trial Log</span>
+        <p class="form-description">Log of trial proceedings as approved by Doug</p>
+        <a href="https://dougtone.com/forms/D-310" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-311</span>
+        <span class="form-title">Doug Judgment Registration</span>
+        <p class="form-description">Registration of judgment as defined by Doug</p>
+        <a href="https://dougtone.com/forms/D-311" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-312</span>
+        <span class="form-title">Doug Enforcement Plan</span>
+        <p class="form-description">Plan for enforcement of judgment as approved by Doug</p>
+        <a href="https://dougtone.com/forms/D-312" class="download-link">Download Form</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="appeals" class="form-section">
+    <h2>Appeals Forms (D-400 Series)</h2>
+    <ul class="form-list">
+      <li class="form-item">
+        <span class="form-id">D-401</span>
+        <span class="form-title">Notice of Appeal</span>
+        <p class="form-description">Initial notice of intent to appeal</p>
+        <a href="https://dougtone.com/forms/D-401" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-402</span>
+        <span class="form-title">Doug Appeal Justification</span>
+        <p class="form-description">Justification for appeal as relevant to Doug&apos;s interests</p>
+        <a href="https://dougtone.com/forms/D-402" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-403</span>
+        <span class="form-title">Lower Court Doug Analysis</span>
+        <p class="form-description">Analysis of lower court&apos;s handling of Doug-relevant issues</p>
+        <a href="https://dougtone.com/forms/D-403" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-404</span>
+        <span class="form-title">Record Compilation Request</span>
+        <p class="form-description">Request for compilation of record on appeal</p>
+        <a href="https://dougtone.com/forms/D-404" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-405</span>
+        <span class="form-title">Argument Request</span>
+        <p class="form-description">Request for oral argument on appeal</p>
+        <a href="https://dougtone.com/forms/D-405" class="download-link">Download Form</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="magistrate" class="form-section">
+    <h2>Magistrate &amp; Doug-Adjacent Forms (D-850 Series)</h2>
+    <ul class="form-list">
+      <li class="form-item">
+        <span class="form-id">D-851</span>
+        <span class="form-title">Magistrate Complaint</span>
+        <p class="form-description">Initial filing for magistrate matters</p>
+        <a href="https://dougtone.com/forms/D-851" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-852</span>
+        <span class="form-title">Doug Impact Statement - Minor</span>
+        <p class="form-description">Statement of impact on Doug&apos;s interests for minor matters</p>
+        <a href="https://dougtone.com/forms/D-852" class="download-link">Download Form</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="attorney" class="form-section">
+    <h2>Attorney Forms</h2>
+    <ul class="form-list">
+      <li class="form-item">
+        <span class="form-id">D-LAW</span>
+        <span class="form-title">Application for Doug-Licensed Attorney</span>
+        <p class="form-description">Initial attorney licensing application</p>
+        <a href="https://dougtone.com/forms/D-LAW" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-DWV</span>
+        <span class="form-title">Application for Temporary Waiver of Doug Naming Requirement</span>
+        <p class="form-description">Request for exemption from Doug naming conventions</p>
+        <a href="https://dougtone.com/forms/D-DWV" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-BAR</span>
+        <span class="form-title">Disbarment of Attorney</span>
+        <p class="form-description">Official notice of attorney disbarment</p>
+        <a href="https://dougtone.com/forms/D-BAR" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-INQ</span>
+        <span class="form-title">Presiding Inquisitor Appointment</span>
+        <p class="form-description">Application for Inquisitor position</p>
+        <a href="https://dougtone.com/forms/D-INQ" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">D-MAR</span>
+        <span class="form-title">Dougmarshal Deputization</span>
+        <p class="form-description">Application for Dougmarshal deputy position</p>
+        <a href="https://dougtone.com/forms/D-MAR" class="download-link">Download Form</a>
+      </li>
+    </ul>
+  </section>
+
+  <section id="judicial" class="form-section">
+    <h2>Judicial Forms (J Series)</h2>
+    <ul class="form-list">
+      <li class="form-item">
+        <span class="form-id">J-1A</span>
+        <span class="form-title">Summary Dismissal of a Case</span>
+        <p class="form-description">Order for summary dismissal</p>
+        <a href="https://dougtone.com/forms/J-1A" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-1B</span>
+        <span class="form-title">Summary Judgment of a Case</span>
+        <p class="form-description">Order for summary judgment</p>
+        <a href="https://dougtone.com/forms/J-1B" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-1C</span>
+        <span class="form-title">Dismissal of Attorney</span>
+        <p class="form-description">Order dismissing counsel</p>
+        <a href="https://dougtone.com/forms/J-1C" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-1D</span>
+        <span class="form-title">Appointment of Attorney</span>
+        <p class="form-description">Order appointing counsel</p>
+        <a href="https://dougtone.com/forms/J-1D" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-1E</span>
+        <span class="form-title">Motion Response</span>
+        <p class="form-description">Judicial response to motion</p>
+        <a href="https://dougtone.com/forms/J-1E" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-1F</span>
+        <span class="form-title">Pattern Jury Instructions</span>
+        <p class="form-description">Standard jury instructions</p>
+        <a href="https://dougtone.com/forms/J-1F" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-2B</span>
+        <span class="form-title">Bench Verdict</span>
+        <p class="form-description">Verdict from bench trial</p>
+        <a href="https://dougtone.com/forms/J-2B" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-2C</span>
+        <span class="form-title">Jury Verdict</span>
+        <p class="form-description">Record of jury verdict</p>
+        <a href="https://dougtone.com/forms/J-2C" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-2D</span>
+        <span class="form-title">Sentencing</span>
+        <p class="form-description">Sentencing order</p>
+        <a href="https://dougtone.com/forms/J-2D" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-2E</span>
+        <span class="form-title">Commitment to Dougmarshal General or Doug Penitentiary</span>
+        <p class="form-description">Order of commitment</p>
+        <a href="https://dougtone.com/forms/J-2E" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-3A</span>
+        <span class="form-title">Adjudication of a Civil Case</span>
+        <p class="form-description">Final civil case determination</p>
+        <a href="https://dougtone.com/forms/J-3A" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-4A</span>
+        <span class="form-title">Search Warrant</span>
+        <p class="form-description">Standard search warrant</p>
+        <a href="https://dougtone.com/forms/J-4A" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-4B</span>
+        <span class="form-title">Hauptdougkrim Search Warrant</span>
+        <p class="form-description">Special search warrant for Doug-critical matters</p>
+        <a href="https://dougtone.com/forms/J-4B" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-4C</span>
+        <span class="form-title">Bench Warrant</span>
+        <p class="form-description">Warrant issued from bench</p>
+        <a href="https://dougtone.com/forms/J-4C" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-4D</span>
+        <span class="form-title">Arrest Warrant</span>
+        <p class="form-description">Standard arrest warrant</p>
+        <a href="https://dougtone.com/forms/J-4D" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-4E</span>
+        <span class="form-title">Capias Warrant</span>
+        <p class="form-description">Warrant for civil arrest and detention</p>
+        <a href="https://dougtone.com/forms/J-4E" class="download-link">Download Form</a>
+      </li>
+      <li class="form-item">
+        <span class="form-id">J-5A</span>
+        <span class="form-title">Notice of Citation</span>
+        <p class="form-description">Official citation notice</p>
+        <a href="https://dougtone.com/forms/J-5A" class="download-link">Download Form</a>
+      </li>
+    </ul>
+  </section>
+
+  <button id="scrollToTop" onclick="scrollToTop()">&#x2191;</button>
+</div>
+
+<footer>
+  <p> 2025 The Grand Judiciary of Doug. All rights reserved.</p>
+  <p>1 First Street, Doug&apos;s Neighborhood, Dougville, DG 12345</p>
+  <p>For questions about this website, please contact the Webmaster of Doug</p>
+</footer>
+
+<script>function showSection(sectionId) {
+  document.querySelectorAll('.form-section').forEach(section => {
+    section.classList.remove('active');
+  });
+  document.querySelectorAll('.nav-tabs button').forEach(button => {
+    button.classList.remove('active');
+  });
+  document.getElementById(sectionId).classList.add('active');
+  document.querySelector(`[data-section="${sectionId}"]`).classList.add('active');
+}
+function searchForms() {
+  const searchTerm = document.getElementById('formSearch').value.toLowerCase();
+  const formItems = document.querySelectorAll('.form-item');
+  let visibleCount = 0;
+  formItems.forEach(item => {
+    const text = item.textContent.toLowerCase();
+    if (text.includes(searchTerm)) {
+      item.style.display = 'block';
+      visibleCount++;
+    } else {
+      item.style.display = 'none';
+    }
+  });
+  document.querySelectorAll('.form-counter').forEach(counter => {
+    counter.textContent = `Showing ${visibleCount} forms`;
+  });
+}
+window.onscroll = function () {
+  const scrollButton = document.getElementById('scrollToTop');
+  if (document.body.scrollTop > 500 || document.documentElement.scrollTop > 500) {
+    scrollButton.classList.add('visible');
+  } else {
+    scrollButton.classList.remove('visible');
+  }
+};
+function scrollToTop() {
+  window.scrollTo({
+    top: 0,
+    behavior: 'smooth'
+  });
+}</script>
+
+</body></html>
