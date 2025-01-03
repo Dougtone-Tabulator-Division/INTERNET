@@ -1,0 +1,300 @@
+<html><head><base href="https://dougcourt.gov/"/>
+<title>Current Term Opinions - The Grand Judiciary of Doug</title>
+<style>
+:root {
+  --primary-blue: #003366;
+  --gold: #c5a572;
+  --cream: #f5f5f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', serif;
+}
+
+body {
+  background: var(--cream);
+}
+
+header {
+  background: var(--primary-blue);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+nav {
+  background: var(--gold);
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 2rem auto;
+  padding: 2rem;
+}
+
+.opinion-detail {
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.term-header {
+  color: var(--primary-blue);
+  border-bottom: 2px solid var(--gold);
+  padding-bottom: 1rem;
+  margin-bottom: 2rem;
+}
+
+.opinion-title {
+  color: var(--primary-blue);
+  margin: 1rem 0;
+  font-size: 1.5em;
+}
+
+.opinion-meta {
+  background: #f8f9fa;
+  padding: 1rem;
+  border-left: 4px solid var(--primary-blue);
+  margin: 1rem 0;
+}
+
+.opinion-content {
+  line-height: 1.8;
+  margin: 2rem 0;
+}
+
+.opinion-footnote {
+  font-size: 0.9em;
+  color: #666;
+  border-top: 1px solid #ddd;
+  margin-top: 2rem;
+  padding-top: 1rem;
+}
+
+.opinion-status {
+  display: inline-block;
+  padding: 0.3rem 1rem;
+  border-radius: 3px;
+  font-weight: bold;
+  background: #e8f5e9;
+  color: #2e7d32;
+  margin: 0.5rem 0;
+}
+
+.dissent {
+  border-left: 4px solid #ff4444;
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+.concurrence {
+  border-left: 4px solid #00C851;
+  padding-left: 1rem;
+  margin: 1rem 0;
+}
+
+footer {
+  background: var(--primary-blue);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.motto {
+  font-style: italic;
+  color: var(--gold);
+}
+
+.download-button {
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  background: var(--primary-blue);
+  color: white;
+  text-decoration: none;
+  border-radius: 3px;
+  margin: 1rem 0;
+}
+
+.download-button:hover {
+  background: #004c99;
+}
+
+.justice-list {
+  background: white;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.justice-card {
+  border-left: 4px solid var(--primary-blue);
+  padding: 1rem;
+  margin: 1rem 0;
+  background: #f8f9fa;
+}
+
+.justice-card.chief {
+  border-left: 4px solid var(--gold);
+  background: #f8f9fa;
+}
+
+.justice-card.adjunct {
+  border-left: 4px solid #4a90e2;
+}
+
+.justice-name {
+  font-size: 1.2em;
+  color: var(--primary-blue);
+  font-weight: bold;
+}
+
+.justice-title {
+  color: #666;
+  font-style: italic;
+  margin: 0.5rem 0;
+}
+
+.justice-info {
+  font-size: 0.9em;
+  line-height: 1.6;
+}
+</style>
+</head>
+<body>
+<header>
+  <img src="/logo.png" alt="Grand Judiciary of Doug Seal" class="logo">
+  <h1>The Grand Judiciary of Doug</h1>
+  <div class="motto">Justia Omnibus et Doug</div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="https://dougcourt.gov/about">About</a></li>
+    <li><a href="https://dougcourt.gov/opinions">Opinions</a></li>
+    <li><a href="https://dougcourt.gov/oral-arguments">Oral Arguments</a></li>
+    <li><a href="https://dougcourt.gov/rules">Rules & Guidance</a></li>
+    <li><a href="https://dougcourt.gov/forms">Forms</a></li>
+    <li><a href="https://dougcourt.gov/library">Library</a></li>
+  </ul>
+</nav>
+
+<div class="content">
+  <h1 class="term-header">Current Justices of the Grand Judiciary of Doug</h1>
+
+  <div class="justice-list">
+    <!-- Chief Justice -->
+    <div class="justice-card chief">
+      <div class="justice-name">Chief Justice Doug Supreme</div>
+      <div class="justice-title">Chief Justice of the Grand Judiciary of Doug</div>
+      <div class="justice-info">
+        Appointed: 2020
+        <br>
+        Notable Opinion: Doug's Sandwich II (2024)
+        <br>
+        Known for his landmark decisions on sandwich ownership rights and maintaining the proper spelling of "Doug"
+      </div>
+    </div>
+
+    <!-- Adjunct Justices -->
+    <div class="justice-card adjunct">
+      <div class="justice-name">Justice Doug the Elder</div>
+      <div class="justice-title">Senior Adjunct Justice</div>
+      <div class="justice-info">
+        Appointed: 2021
+        <br>
+        Notable Opinion: In re: Doug's Sandwich (2024)
+        <br>
+        Specialist in sandwich classification law and Doug historical precedents
+      </div>
+    </div>
+
+    <div class="justice-card adjunct">
+      <div class="justice-name">Justice Doug Jr.</div>
+      <div class="justice-title">Junior Adjunct Justice</div>
+      <div class="justice-info">
+        Appointed: 2022
+        <br>
+        Notable Dissent: Doug v. Dug (2024)
+        <br>
+        Known for progressive interpretations of Doug Law in digital contexts
+      </div>
+    </div>
+
+    <!-- Titular Justices -->
+    <div class="justice-card">
+      <div class="justice-name">Justice Doug III</div>
+      <div class="justice-title">Titular Justice</div>
+      <div class="justice-info">
+        Appointed: 2023
+        <br>
+        Notable for philosophical concurrences on the nature of Doug-ness
+      </div>
+    </div>
+
+    <div class="justice-card">
+      <div class="justice-name">Justice Doug MacDouglas</div>
+      <div class="justice-title">Titular Justice</div>
+      <div class="justice-info">
+        Appointed: 2023
+        <br>
+        Specializes in international Doug relations and cross-border Doug disputes
+      </div>
+    </div>
+
+    <div class="justice-card">
+      <div class="justice-name">Justice Douglas "Doug" Dougworth</div>
+      <div class="justice-title">Titular Justice</div>
+      <div class="justice-info">
+        Appointed: 2024
+        <br>
+        Expert in constitutional Doug interpretation and Doug administrative law
+      </div>
+    </div>
+
+    <div class="justice-card">
+      <div class="justice-name">Justice Doug Douglass</div>
+      <div class="justice-title">Titular Justice</div>
+      <div class="justice-info">
+        Appointed: 2024
+        <br>
+        Specializes in Doug civil procedure and Doug legislative intent
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <p> 2025 The Grand Judiciary of Doug. All rights reserved.</p>
+  <p>1 First Street, Doug's Neighborhood, Dougville, DG 12345</p>
+  <p>For questions about this website, please contact the Webmaster of Doug</p>
+</footer>
+
+</body></html>

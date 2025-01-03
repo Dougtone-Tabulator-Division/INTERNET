@@ -1,0 +1,400 @@
+<html><head><base href="https://dougcourt.gov/"/>
+<title>About | The Grand Judiciary of Doug</title>
+<style>
+:root {
+  --primary-blue: #003366;
+  --gold: #c5a572;
+  --cream: #f5f5f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', serif;
+}
+
+body {
+  background: var(--cream);
+}
+
+header {
+  background: var(--primary-blue);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+nav {
+  background: var(--gold);
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3');
+  background-size: cover;
+  color: white;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section {
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.circuit-courts {
+  list-style: none;
+}
+
+.circuit-court-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--primary-blue);
+  background: #f8f9fa;
+  transition: transform 0.2s ease;
+}
+
+.circuit-court-item:hover {
+  transform: translateX(5px);
+  background: #f0f2f5;
+}
+
+.circuit-court-title {
+  font-weight: bold;
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+}
+
+.recent-opinions {
+  list-style: none;
+}
+
+.opinion-card {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  background: white;
+  transition: transform 0.2s ease;
+}
+
+.opinion-card:hover {
+  transform: translateX(5px);
+  border-left: 4px solid var(--primary-blue);
+}
+
+.opinion-metadata {
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 0.5rem;
+}
+
+.opinion-title {
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+}
+
+.opinion-summary {
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.opinion-status {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.status-decided {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-pending {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.motto {
+  font-style: italic;
+  color: var(--gold);
+}
+
+footer {
+  background: var(--primary-blue);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+
+.timeline {
+  position: relative;
+  max-width: 1000px;
+  margin: 40px auto;
+  padding: 20px;
+}
+
+.timeline::after {
+  content: '';
+  position: absolute;
+  width: 6px;
+  background-color: var(--primary-blue);
+  top: 0;
+  bottom: 0;
+  left: 50%;
+  margin-left: -3px;
+}
+
+.timeline-item {
+  padding: 10px 40px;
+  position: relative;
+  width: 50%;
+  animation: fadeIn 0.5s ease-in;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+.timeline-item::after {
+  content: '';
+  position: absolute;
+  width: 25px;
+  height: 25px;
+  right: -17px;
+  background-color: var(--cream);
+  border: 4px solid var(--gold);
+  top: 15px;
+  border-radius: 50%;
+  z-index: 1;
+}
+
+.left {
+  left: 0;
+}
+
+.right {
+  left: 50%;
+}
+
+.right::after {
+  left: -16px;
+}
+
+.timeline-content {
+  padding: 20px 30px;
+  background-color: white;
+  position: relative;
+  border-radius: 6px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.temple-description {
+  background: linear-gradient(rgba(0,51,102,0.9), rgba(0,51,102,0.9));
+  color: white;
+  padding: 2rem;
+  margin: 2rem 0;
+  border-radius: 5px;
+}
+
+.temple-stats {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+  gap: 1rem;
+  margin-top: 1rem;
+}
+
+.stat-box {
+  background: rgba(255,255,255,0.1);
+  padding: 1rem;
+  border-radius: 5px;
+  text-align: center;
+}
+
+.stat-number {
+  font-size: 2em;
+  color: var(--gold);
+  font-weight: bold;
+}
+
+.portrait-section {
+  display: flex;
+  align-items: center;
+  gap: 2rem;
+  margin: 2rem 0;
+}
+
+.portrait-content {
+  flex: 1;
+}
+
+.portrait-image {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+  background: var(--primary-blue);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--gold);
+  font-size: 1.5em;
+  font-style: italic;
+}
+
+.quote-box {
+  background: var(--cream);
+  padding: 2rem;
+  border-left: 5px solid var(--gold);
+  margin: 2rem 0;
+  font-style: italic;
+}
+</style>
+</head>
+<body>
+<header>
+  <img src="/logo.png" alt="Grand Judiciary of Doug Seal" class="logo">
+  <h1>The Grand Judiciary of Doug</h1>
+  <div class="motto">Justia Omnibus et Doug</div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="https://dougcourt.gov/about">About</a></li>
+    <li><a href="https://dougcourt.gov/opinions">Opinions</a></li>
+    <li><a href="https://dougcourt.gov/oral-arguments">Oral Arguments</a></li>
+    <li><a href="https://dougcourt.gov/rules">Rules & Guidance</a></li>
+    <li><a href="https://dougcourt.gov/forms">Forms</a></li>
+    <li><a href="https://dougcourt.gov/library">Library</a></li>
+  </ul>
+</nav>
+
+<div class="content">
+  <section class="section">
+    <h2>About the Grand Judiciary of Doug</h2>
+    <p>Established in 2021 through the Great Doug Proclamation, the Grand Judiciary of Doug stands as the supreme arbiter of all matters Doug and Doug-adjacent in our jurisdiction. Our mission is to interpret Doug Law with wisdom, enforce Doug Justice with fairness, and ensure that the principles of Doug remain inviolate for future generations.</p>
+    
+    <div class="quote-box">
+      "Let it be known that where Doug's Law exists, justice shall prevail, and where justice prevails, Doug shall be pleased." - Chief Justice Doug Supreme, Inaugural Address, 2021
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>The Grand Temple of Justice</h2>
+    <div class="temple-description">
+      <p>The Grand Temple of Justice, completed in 2022, stands as a testament to Doug's architectural and judicial vision. Located at 1 First Street in historic Dougville, this magnificent structure serves as both the physical and spiritual center of Doug Law.</p>
+      
+      <div class="temple-stats">
+        <div class="stat-box">
+          <div class="stat-number">1,789</div>
+          <div>Square Feet of Doug-approved Marble</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">7</div>
+          <div>Doug-themed Courtrooms</div>
+        </div>
+        <div class="stat-box">
+          <div class="stat-number">1,337</div>
+          <div>Books in the Doug Law Library</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>History of the Judiciary</h2>
+    <div class="timeline">
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>2020</h3>
+          <p>Doug Supreme realizes the need for a unified Doug Justice System after a series of contentious neighborhood disputes.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>2021</h3>
+          <p>The Great Doug Proclamation establishes the Grand Judiciary of Doug. Doug Supreme appointed as Chief Justice.</p>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>2022</h3>
+          <p>Completion of the Grand Temple of Justice. First landmark case: Doug v. Other Doug establishes fundamental Doug Law principles.</p>
+        </div>
+      </div>
+      <div class="timeline-item right">
+        <div class="timeline-content">
+          <h3>2023</h3>
+          <p>Expansion of Circuit Court system. Establishment of the Inquisitorial Commission.</p>
+        </div>
+      </div>
+      <div class="timeline-item left">
+        <div class="timeline-content">
+          <h3>2024</h3>
+          <p>Implementation of the Three-Tier Doug Rights System. Landmark ruling in Doug v. Dug case.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="section">
+    <h2>Chief Justice Doug Supreme: A Biography</h2>
+    <div class="portrait-section">
+      <div class="portrait-image">
+        "Justice is Doug, and Doug is Justice"
+      </div>
+      <div class="portrait-content">
+        <p>Born in a humble Doug household, Doug Supreme showed early signs of exceptional Doug-ness. After earning his Doctorate in Doug Law from the prestigious University of Doug (summa cum doug laude), he spent years arbitrating neighborhood disputes and mediating pizza topping controversies.</p>
+        <p>His groundbreaking thesis, "The Doug Paradox: On the Nature of Doug-ness in Modern Jurisprudence," revolutionized the field of Doug Studies. As Chief Justice, he has championed reforms such as the Mandatory Doug Acknowledgment Act and the controversial "No Two Dougs" doctrine.</p>
+        <p>Notable achievements include:</p>
+        <ul>
+          <li>Recipient of the Golden Doug Award for Excellence in Doug Law (2019)</li>
+          <li>Author of "Doug's Guide to Doug Law" (bestseller in Doug jurisdictions)</li>
+          <li>Founder of the Doug Law Review</li>
+          <li>First to achieve perfect score on the Doug Bar Exam</li>
+        </ul>
+      </div>
+    </div>
+  </section>
+</div>
+
+<footer>
+  <p> 2025 The Grand Judiciary of Doug. All rights reserved.</p>
+  <p>1 First Street, Doug's Neighborhood, Dougville, DG 12345</p>
+  <p>For questions about this website, please contact the Webmaster of Doug</p>
+</footer>
+
+</body></html>

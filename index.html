@@ -1,0 +1,293 @@
+<html><head><base href="https://dougcourt.gov/"/>
+<title>The Grand Judiciary of Doug | Official Website</title>
+<style>
+:root {
+  --primary-blue: #003366;
+  --gold: #c5a572;
+  --cream: #f5f5f0;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  font-family: 'Times New Roman', serif;
+}
+
+body {
+  background: var(--cream);
+}
+
+header {
+  background: var(--primary-blue);
+  color: white;
+  padding: 1rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+}
+
+nav {
+  background: var(--gold);
+  padding: 1rem;
+}
+
+nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: center;
+  gap: 2rem;
+}
+
+nav a {
+  color: var(--primary-blue);
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.hero {
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(rgba(0,0,0,0.5), rgba(0,0,0,0.5)), url('https://images.unsplash.com/photo-1589829545856-d10d557cf95f?ixlib=rb-4.0.3');
+  background-size: cover;
+  color: white;
+}
+
+.content {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 2rem;
+}
+
+.section {
+  background: white;
+  padding: 2rem;
+  margin-bottom: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+}
+
+.circuit-courts {
+  list-style: none;
+}
+
+.circuit-court-item {
+  padding: 1rem;
+  margin-bottom: 1rem;
+  border-left: 4px solid var(--primary-blue);
+  background: #f8f9fa;
+  transition: transform 0.2s ease;
+}
+
+.circuit-court-item:hover {
+  transform: translateX(5px);
+  background: #f0f2f5;
+}
+
+.circuit-court-title {
+  font-weight: bold;
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+}
+
+.recent-opinions {
+  list-style: none;
+}
+
+.opinion-card {
+  border: 1px solid #ddd;
+  padding: 1.5rem;
+  border-radius: 5px;
+  margin-bottom: 1rem;
+  background: white;
+  transition: transform 0.2s ease;
+}
+
+.opinion-card:hover {
+  transform: translateX(5px);
+  border-left: 4px solid var(--primary-blue);
+}
+
+.opinion-metadata {
+  color: #666;
+  font-size: 0.9em;
+  margin-top: 0.5rem;
+}
+
+.opinion-title {
+  color: var(--primary-blue);
+  margin-bottom: 0.5rem;
+}
+
+.opinion-summary {
+  line-height: 1.6;
+  margin: 0.5rem 0;
+}
+
+.opinion-status {
+  display: inline-block;
+  padding: 0.2rem 0.5rem;
+  border-radius: 3px;
+  font-size: 0.8em;
+  font-weight: bold;
+}
+
+.status-decided {
+  background: #e8f5e9;
+  color: #2e7d32;
+}
+
+.status-pending {
+  background: #fff3e0;
+  color: #ef6c00;
+}
+
+.motto {
+  font-style: italic;
+  color: var(--gold);
+}
+
+footer {
+  background: var(--primary-blue);
+  color: white;
+  text-align: center;
+  padding: 1rem;
+  margin-top: 2rem;
+}
+</style>
+</head>
+<body>
+<header>
+  <img src="/logo.png" alt="Grand Judiciary of Doug Seal" class="logo">
+  <h1>The Grand Judiciary of Doug</h1>
+  <div class="motto">Justia Omnibus et Doug</div>
+</header>
+
+<nav>
+  <ul>
+    <li><a href="https://dougcourt.gov/about">About</a></li>
+    <li><a href="https://dougcourt.gov/opinions">Opinions</a></li>
+    <li><a href="https://dougcourt.gov/oral-arguments">Oral Arguments</a></li>
+    <li><a href="https://dougcourt.gov/rules">Rules & Guidance</a></li>
+    <li><a href="https://dougcourt.gov/forms">Forms</a></li>
+    <li><a href="https://dougcourt.gov/library">Library</a></li>
+  </ul>
+</nav>
+
+<div class="hero">
+  <h2>Welcome to the Official Website of the Grand Judiciary of Doug</h2>
+  <p>Equal Justice Under Doug</p>
+</div>
+
+<div class="content">
+  <section class="section">
+    <h2>Chief Justice Doug Supreme</h2>
+    <p>Chief Justice Doug Supreme was appointed to the Grand Judiciary of Doug in 2021 after serving as Head Arbitrator of Neighborhood Disputes and Senior Judge of Pizza Toppings Controversies. Known for his landmark decision in <em>Doug v. Other Doug (2022)</em>, which established that no two Dougs can live on the same street without explicit written permission from the Grand Judiciary.</p>
+    <p>Famous for his motto: "I am the Doug, and the Doug is the law."</p>
+  </section>
+
+  <section class="section">
+    <h2>Circuit Courts of Doug</h2>
+    <ul class="circuit-courts">
+      <li class="circuit-court-item">
+        <div class="circuit-court-title">The Northern Circuit of Doug</div>
+        <p>Handling all disputes north of Doug's house</p>
+      </li>
+      <li class="circuit-court-item">
+        <div class="circuit-court-title">The Southern Circuit of Doug</div>
+        <p>Handling all disputes south of Doug's house</p>
+      </li>
+      <li class="circuit-court-item">
+        <div class="circuit-court-title">The Circuit Court of Lesser Dougs</div>
+        <p>Handling cases involving people named Douglas</p>
+      </li>
+      <li class="circuit-court-item">
+        <div class="circuit-court-title">The Special Circuit for Doug-Adjacent Matters</div>
+        <p>For cases tangentially related to Doug</p>
+      </li>
+      <li class="circuit-court-item">
+        <div class="circuit-court-title">The General Appellate Circuit</div>
+        <p>Reviewing decisions from lower Doug courts and ensuring consistent application of Doug Law</p>
+      </li>
+      <li class="circuit-court-item">
+        <div class="circuit-court-title">The Inquisitorial Commission</div>
+        <p>A special investigative body charged with investigating and prosecuting High Crimes against Doug, including but not limited to: impersonating Doug, questioning Doug's authority, and refusing to acknowledge Doug's superiority in matters of Doug Law</p>
+      </li>
+    </ul>
+  </section>
+
+  <section class="section">
+    <h2>Recent Opinions</h2>
+    <ul class="recent-opinions">
+      <li class="opinion-card">
+        <h3 class="opinion-title">Doug v. Dug (2024)</h3>
+        <p class="opinion-summary">Landmark ruling on the proper spelling of "Doug" in official documents. Majority opinion establishes that "Dug" is a grammatical offense punishable by mandatory Doug Law education.</p>
+        <div class="opinion-metadata">
+          <span class="opinion-status status-decided">Decided: 6-1</span>
+          <p>Majority Opinion: Chief Justice Doug Supreme</p>
+          <p>Dissenting: Justice Doug Jr. (arguing for acceptance of alternative spellings in informal contexts)</p>
+        </div>
+      </li>
+      
+      <li class="opinion-card">
+        <h3 class="opinion-title">In re: Doug's Sandwich (2024)</h3>
+        <p class="opinion-summary">Emergency ruling establishing that within Doug jurisdiction, a hot dog is legally classified as a sandwich, but a taco remains in legal limbo pending further review.</p>
+        <div class="opinion-metadata">
+          <span class="opinion-status status-decided">Decided: 4-3</span>
+          <p>Majority Opinion: Justice Doug the Elder</p>
+          <p>Notable Concurrence: Justice Doug III on the philosophical nature of sandwich-hood</p>
+        </div>
+      </li>
+      
+      <li class="opinion-card">
+        <h3 class="opinion-title">Doug's HOA v. Doug's Garden Gnomes (2023)</h3>
+        <p class="opinion-summary">Constitutional challenge to garden gnome restrictions. Case questions whether HOA regulations violate the fundamental right to garden decoration under Doug Law.</p>
+        <div class="opinion-metadata">
+          <span class="opinion-status status-decided">Decided: 5-2</span>
+          <p>Majority Opinion: Justice Doug the Wise</p>
+          <p>Notable Dissent: Justice Doug the Gardener</p>
+        </div>
+      </li>
+
+      <li class="opinion-card">
+        <h3 class="opinion-title">State of Doug v. Non-Doug Entities (2023)</h3>
+        <p class="opinion-summary">Sweeping decision defining the rights and limitations of non-Doug entities within Doug jurisdiction. Establishes three-tier system of Doug-rights recognition.</p>
+        <div class="opinion-metadata">
+          <span class="opinion-status status-decided">Decided: Unanimous</span>
+          <p>Opinion by: The Full Doug Court</p>
+        </div>
+      </li>
+
+      <li class="opinion-card">
+        <h3 class="opinion-title">Doug's Coffee v. Temperature Standards Board (2022)</h3>
+        <p class="opinion-summary">Ruling on the constitutionality of mandated coffee temperature regulations. Sets precedent for beverage temperature disputes across all Doug jurisdictions.</p>
+        <div class="opinion-metadata">
+          <span class="opinion-status status-decided">Decided: 5-2</span>
+          <p>Majority Opinion: Justice Doug the Caffeinated</p>
+        </div>
+      </li>
+
+      <li class="opinion-card">
+        <h3 class="opinion-title">In re: Doug's Authority to Doug (2022)</h3>
+        <p class="opinion-summary">Landmark case establishing the extent of Doug's authority to Doug in Doug-adjacent territories. Major implications for inter-Doug relations.</p>
+        <div class="opinion-metadata">
+          <span class="opinion-status status-decided">Decided: 7-0</span>
+          <p>Unanimous Opinion by Chief Justice Doug Supreme</p>
+        </div>
+      </li>
+    </ul>
+  </section>
+</div>
+
+<footer>
+  <p> 2025 The Grand Judiciary of Doug. All rights reserved.</p>
+  <p>1 First Street, Doug's Neighborhood, Dougville, DG 12345</p>
+  <p>For questions about this website, please contact the Webmaster of Doug</p>
+</footer>
+
+</body></html>
