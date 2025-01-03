@@ -1,0 +1,256 @@
+<html><head><base href="/" /></head>
+<title>Form D-851: Magistrate Complaint - The Grand Judiciary of Doug</title>
+<style>
+:root {
+  --primary-blue: #003366;
+  --gold: #c5a572;
+  --cream: #f5f5f0;
+}
+
+body {
+  background: #eee;
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.paper {
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  margin: 0 auto;
+  padding: 0.5in;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+  page-break-after: always;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 0.75in;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.form-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.form-id {
+  position: absolute;
+  top: 0.5in;
+  right: 0.5in;
+  font-size: 12px;
+  color: #666;
+}
+
+.form-section {
+  margin: 20px 0;
+}
+
+.form-field {
+  margin: 15px 0;
+}
+
+.form-field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-field input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+.form-field textarea {
+  width: 100%;
+  height: 200px;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+.signature-field {
+  border-top: 1px solid #999;
+  width: 50%;
+  margin-top: 30px;
+  padding-top: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0.5in;
+  left: 0.5in;
+  right: 0.5in;
+  font-size: 10px;
+  color: #666;
+  border-top: 1px solid #999;
+  padding-top: 10px;
+}
+
+.print-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  background: #004c99;
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .paper {
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  .print-button {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<button class="print-button" onclick="window.print()">Print Form</button>
+
+<div class="paper">
+  <div class="form-id">Form D-851 (Rev. 2025)</div>
+  
+  <div class="form-header">
+    <img src="/logo.png" alt="Grand Judiciary of Doug Seal" class="logo">
+    <div class="form-title">THE GRAND JUDICIARY OF DOUG</div>
+    <div class="form-subtitle">MAGISTRATE COMPLAINT</div>
+    <div class="form-subtitle">(Pursuant to Doug Magistrate Rule 3.1)</div>
+  </div>
+
+  <div class="form-section">
+    <div class="form-field">
+      <label>DOUG MAGISTRATE COURT OF:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>COMPLAINT NUMBER:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>COMPLAINANT NAME:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>COMPLAINANT ADDRESS:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>RESPONDENT NAME:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>RESPONDENT ADDRESS:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>NATURE OF COMPLAINT:</label>
+      <textarea placeholder="Describe the nature of your complaint in detail, including dates, times, and specific Doug-related grievances..."></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>REQUESTED RELIEF:</label>
+      <textarea placeholder="Describe what action you are requesting from the Magistrate Court..."></textarea>
+    </div>
+
+    <div class="signature-field">
+      Signature of Complainant
+    </div>
+    
+    <div class="signature-field" style="margin-left: 50%;">
+      Date
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>FILING INSTRUCTIONS:</strong> Submit original and two copies to the Doug Magistrate Court in your jurisdiction. Include filing fee of 15 Doug-credits (fee may be waived upon showing of Doug-hardship). Service will be completed by the Dougmarshal's office upon filing. A hearing date will be set within 30 Doug-days.</p>
+    <p>Form D-851 (Rev. 2025) Page 1 of 2</p>
+  </div>
+</div>
+
+<div class="paper">
+  <div class="form-id">Form D-851 (Rev. 2025)</div>
+  
+  <div class="form-section">
+    <p><strong>FOR MAGISTRATE USE ONLY</strong></p>
+    
+    <div style="border: 1px solid #999; padding: 20px; margin: 20px 0;">
+      <p>Date Filed: _________________</p>
+      <p>Filing Fee: □ Paid □ Waived</p>
+      <p>Service: □ Completed □ Attempted □ Not Attempted</p>
+      <p>Hearing Date Set: _________________</p>
+      <p>Hearing Time: _________________</p>
+      <p>Assigned Magistrate: _________________</p>
+    </div>
+
+    <p><strong>PRELIMINARY REVIEW</strong></p>
+    
+    <div class="form-field">
+      <label>JURISDICTION VERIFICATION:</label>
+      <p>□ Complaint falls within Doug Magistrate jurisdiction</p>
+      <p>□ Complaint requires transfer to Grand Judiciary</p>
+      <p>□ Complaint dismissed for lack of jurisdiction</p>
+    </div>
+
+    <div class="form-field">
+      <label>MAGISTRATE NOTES:</label>
+      <textarea></textarea>
+    </div>
+
+    <div class="signature-field">
+      Signature of Doug Magistrate
+    </div>
+    
+    <div class="signature-field" style="margin-left: 50%;">
+      Date
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>NOTICE:</strong> False statements made on this form may constitute Doug-perjury and may be punishable by fine, imprisonment, or both under Doug Magistrate Code § 851.</p>
+    <p>Form D-851 (Rev. 2025) Page 2 of 2</p>
+  </div>
+</div>
+
+</body>
+</html>

@@ -1,0 +1,290 @@
+<html><head><base href="/">
+<title>Form D-216: Doug Penitentiary Intake - The Grand Judiciary of Doug</title>
+<style>
+:root {
+  --primary-blue: #003366;
+  --gold: #c5a572;
+  --cream: #f5f5f0;
+}
+
+body {
+  background: #eee;
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.paper {
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  margin: 0 auto 20px;
+  padding: 0.5in;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 0.5in;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.form-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.form-id {
+  position: absolute;
+  top: 0.5in;
+  right: 0.5in;
+  font-size: 12px;
+  color: #666;
+}
+
+.form-section {
+  margin: 20px 0;
+}
+
+.form-field {
+  margin: 15px 0;
+}
+
+.form-field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-field input[type="text"],
+.form-field textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+.checkbox-group {
+  margin: 10px 0;
+}
+
+.checkbox-label {
+  display: inline-block;
+  margin-right: 20px;
+}
+
+.signature-field {
+  border-top: 1px solid #999;
+  width: 50%;
+  margin-top: 30px;
+  padding-top: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0.5in;
+  left: 0.5in;
+  right: 0.5in;
+  font-size: 10px;
+  color: #666;
+  border-top: 1px solid #999;
+  padding-top: 10px;
+}
+
+.print-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  background: #004c99;
+}
+
+.warning-text {
+  color: var(--primary-blue);
+  font-weight: bold;
+  text-transform: uppercase;
+}
+
+.lie-question {
+  font-size: 48px;
+  text-align: center;
+  margin: 2in 0;
+  font-weight: bold;
+  color: var(--primary-blue);
+}
+
+.page-number {
+  position: absolute;
+  bottom: 0.25in;
+  right: 0.5in;
+  font-size: 12px;
+  color: #666;
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .paper {
+    box-shadow: none;
+    margin: 0;
+    page-break-after: always;
+  }
+  
+  .print-button {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<button class="print-button" onclick="window.print()">Print Form</button>
+
+<!-- Page 1 -->
+<div class="paper">
+  <div class="form-id">Form D-216 (Rev. 2025)</div>
+  
+  <div class="form-header">
+    <img src="/logo.png" alt="Grand Judiciary of Doug Seal" class="logo">
+    <div class="form-title">THE GRAND JUDICIARY OF DOUG</div>
+    <div class="form-subtitle">DOUG PENITENTIARY INTAKE FORM</div>
+    <div class="form-subtitle">(Required under Doug Rule 28 U.D.C. § 1746)</div>
+  </div>
+
+  <div class="form-section">
+    <div class="warning-text">WARNING: FALSE STATEMENTS WILL RESULT IN ADDITIONAL CHARGES</div>
+    
+    <div class="form-field">
+      <label>1. Prisoner Full Legal Name:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>2. Doug Registration Number (DRN):</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>3. Case Number:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>4. Sentence Length:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>5. Crimes Convicted Of:</label>
+      <textarea rows="4"></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>6. Prior Doug-Offenses:</label>
+      <textarea rows="4"></textarea>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>WARNING: All responses are subject to verification by the Office of the Presiding Inquisitor</p>
+    <p>Form D-216 (Rev. 2025) Page 1 of 7</p>
+  </div>
+  <div class="page-number">Page 1</div>
+</div>
+
+<!-- Page 2 -->
+<div class="paper">
+  <div class="form-id">Form D-216 (Rev. 2025)</div>
+  
+  <div class="form-section">
+    <div class="form-field">
+      <label>7. Medical Conditions:</label>
+      <textarea rows="4"></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>8. Known Associates:</label>
+      <textarea rows="4"></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>9. Special Handling Requirements:</label>
+      <div class="checkbox-group">
+        <label class="checkbox-label"><input type="checkbox"> Maximum Security</label>
+        <label class="checkbox-label"><input type="checkbox"> Isolation</label>
+        <label class="checkbox-label"><input type="checkbox"> Doug-Watch</label>
+      </div>
+    </div>
+
+    <div class="signature-field">
+      Intake Officer Signature
+    </div>
+
+    <div class="signature-field" style="margin-left: 50%;">
+      Prisoner Signature
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>WARNING: All responses are subject to verification by the Office of the Presiding Inquisitor</p>
+    <p>Form D-216 (Rev. 2025) Page 2 of 7</p>
+  </div>
+  <div class="page-number">Page 2</div>
+</div>
+
+<!-- Pages 3-7: HAVE YOU LIED TO US? -->
+<div class="paper">
+  <div class="lie-question">HAVE YOU LIED TO US?</div>
+  <div class="page-number">Page 3</div>
+</div>
+
+<div class="paper">
+  <div class="lie-question">HAVE YOU LIED TO US?</div>
+  <div class="page-number">Page 4</div>
+</div>
+
+<div class="paper">
+  <div class="lie-question">HAVE YOU LIED TO US?</div>
+  <div class="page-number">Page 5</div>
+</div>
+
+<div class="paper">
+  <div class="lie-question">HAVE YOU LIED TO US?</div>
+  <div class="page-number">Page 6</div>
+</div>
+
+<div class="paper">
+  <div class="lie-question">HAVE YOU LIED TO US?</div>
+  <div class="page-number">Page 7</div>
+</div>
+
+</body>
+</html>

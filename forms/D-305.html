@@ -1,0 +1,302 @@
+<html><head><base href="/">
+<title>Form D-305: Doug-Certified Service Notice - The Grand Judiciary of Doug</title>
+<style>
+:root {
+  --primary-blue: #003366;
+  --gold: #c5a572;
+  --cream: #f5f5f0;
+}
+
+body {
+  background: #eee;
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.paper {
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  margin: 0 auto;
+  padding: 0.5in;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.page {
+  min-height: 10in;
+  position: relative;
+  page-break-after: always;
+}
+
+.page:last-child {
+  page-break-after: auto;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 0.75in;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.form-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.form-id {
+  position: absolute;
+  top: 0.5in;
+  right: 0.5in;
+  font-size: 12px;
+  color: #666;
+}
+
+.form-section {
+  margin: 20px 0;
+}
+
+.form-field {
+  margin: 15px 0;
+}
+
+.form-field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-field input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+.form-field textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+.signature-field {
+  border-top: 1px solid #999;
+  width: 50%;
+  margin-top: 30px;
+  padding-top: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0.5in;
+  left: 0.5in;
+  right: 0.5in;
+  font-size: 10px;
+  color: #666;
+  border-top: 1px solid #999;
+  padding-top: 10px;
+}
+
+.print-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  background: #004c99;
+}
+
+.checkbox-group {
+  margin: 10px 0;
+}
+
+.checkbox-item {
+  margin: 5px 0;
+}
+
+.table-section {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 15px 0;
+}
+
+.table-section th,
+.table-section td {
+  border: 1px solid #999;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-section th {
+  background-color: #f0f0f0;
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .paper {
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  .print-button {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<button class="print-button" onclick="window.print()">Print Form</button>
+
+<div class="paper">
+  <div class="page">
+    <div class="form-id">Form D-305 (Rev. 2025)</div>
+    
+    <div class="form-header">
+      <img src="/logo.png" alt="Grand Judiciary of Doug Seal" class="logo">
+      <div class="form-title">THE GRAND JUDICIARY OF DOUG</div>
+      <div class="form-subtitle">DOUG-CERTIFIED SERVICE NOTICE</div>
+      <div class="form-subtitle">(Required under Doug Civil Procedure Rule 4)</div>
+    </div>
+
+    <div class="form-section">
+      <div class="form-field">
+        <label>IN THE MATTER OF:</label>
+        <input type="text">
+      </div>
+
+      <div class="form-field">
+        <label>CASE NUMBER:</label>
+        <input type="text">
+      </div>
+
+      <div class="form-field">
+        <label>PLAINTIFF/PETITIONER:</label>
+        <input type="text">
+      </div>
+
+      <div class="form-field">
+        <label>DEFENDANT/RESPONDENT:</label>
+        <input type="text">
+      </div>
+
+      <h3>CERTIFICATION OF SERVICE</h3>
+      
+      <div class="form-field">
+        <label>I, [name of server], being duly sworn and Doug-certified, declare under penalty of Doug-contempt that:</label>
+        <input type="text">
+      </div>
+
+      <div class="checkbox-group">
+        <div class="checkbox-item">
+          <input type="checkbox"> I am over the age of 18 and Doug-authorized to serve process
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox"> I am not a party to this action
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox"> I possess a valid Doug Process Server Certification (DPSC)
+        </div>
+      </div>
+
+      <table class="table-section">
+        <tr>
+          <th colspan="2">SERVICE DETAILS</th>
+        </tr>
+        <tr>
+          <td>Date of Service:</td>
+          <td><input type="text" style="width: 90%"></td>
+        </tr>
+        <tr>
+          <td>Time of Service (DST):</td>
+          <td><input type="text" style="width: 90%"></td>
+        </tr>
+        <tr>
+          <td>Location of Service:</td>
+          <td><input type="text" style="width: 90%"></td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="page">
+    <div class="form-id">Form D-305 (Rev. 2025) Page 2</div>
+
+    <div class="form-section">
+      <h3>METHOD OF SERVICE</h3>
+      <div class="checkbox-group">
+        <div class="checkbox-item">
+          <input type="checkbox"> Personal Service
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox"> Substitute Service
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox"> Doug-Certified Mail
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox"> Electronic Service (Doug-approved)
+        </div>
+      </div>
+
+      <div class="form-field">
+        <label>Description of Service (include physical description of person served if applicable):</label>
+        <textarea></textarea>
+      </div>
+
+      <div class="form-field">
+        <label>Documents Served:</label>
+        <textarea></textarea>
+      </div>
+
+      <div class="form-field">
+        <label>Additional Notes or Special Circumstances:</label>
+        <textarea></textarea>
+      </div>
+
+      <div class="signature-field">
+        Signature of Process Server
+      </div>
+
+      <div class="signature-field" style="margin-left: 50%;">
+        Doug Process Server Certification Number
+      </div>
+    </div>
+
+    <div class="footer">
+      <p><strong>FILING INSTRUCTIONS:</strong> This form must be filed with the court within 7 Doug-days of service. All fields must be completed in black ink or typed. Attach additional pages if necessary. Service must comply with Doug Civil Procedure Rule 4. Incomplete or incorrect forms will be rejected. A copy must be served on all parties. Retain a copy for your records. Filing fee: 10 Doug-credits.</p>
+      <p>Form D-305 (Rev. 2025) Page 2 of 2</p>
+    </div>
+  </div>
+</div>
+
+</body>
+</html>

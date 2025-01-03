@@ -1,0 +1,280 @@
+<html><head><base href="/" /><title>Form D-302: Doug-Relevance Assessment</title>
+<style>
+:root {
+  --primary-blue: #003366;
+  --gold: #c5a572;
+  --cream: #f5f5f0;
+}
+
+body {
+  background: #eee;
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.paper {
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  margin: 0 auto 20px;
+  padding: 0.5in;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+  page-break-after: always;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 0.5in;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.form-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.form-id {
+  position: absolute;
+  top: 0.5in;
+  right: 0.5in;
+  font-size: 12px;
+  color: #666;
+}
+
+.form-section {
+  margin: 20px 0;
+}
+
+.form-field {
+  margin: 15px 0;
+}
+
+.form-field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-field input[type="text"], .form-field textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+.form-field textarea {
+  height: 100px;
+  resize: none;
+}
+
+.checkbox-grid {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  gap: 10px;
+  margin: 15px 0;
+}
+
+.checkbox-item {
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.signature-field {
+  border-top: 1px solid #999;
+  width: 50%;
+  margin-top: 30px;
+  padding-top: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0.5in;
+  left: 0.5in;
+  right: 0.5in;
+  font-size: 10px;
+  color: #666;
+  border-top: 1px solid #999;
+  padding-top: 10px;
+}
+
+.print-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  background: #004c99;
+}
+
+.page-number {
+  position: absolute;
+  bottom: 0.25in;
+  right: 0.5in;
+  font-size: 12px;
+  color: #666;
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .paper {
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  .print-button {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<button class="print-button" onclick="window.print()">Print Form</button>
+
+<div class="paper">
+  <div class="form-id">Form D-302 (Rev. 2025)</div>
+  
+  <div class="form-header">
+    <img src="/logo.png" alt="Grand Judiciary of Doug Seal" class="logo">
+    <div class="form-title">THE GRAND JUDICIARY OF DOUG</div>
+    <div class="form-subtitle">DOUG-RELEVANCE ASSESSMENT</div>
+    <div class="form-subtitle">(Required for all Civil Proceedings under Doug Rule 42 U.D.C. &#xa7; 303)</div>
+  </div>
+
+  <div class="form-section">
+    <div class="form-field">
+      <label>1. Case Number:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>2. Plaintiff(s):</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>3. Defendant(s):</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>4. Brief Description of Case Matter:</label>
+      <textarea></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>5. Doug-Relevance Factors (check all that apply):</label>
+      <div class="checkbox-grid">
+        <div class="checkbox-item">
+          <input type="checkbox" id="factor1">
+          <label for="factor1">Involves Doug directly</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="factor2">
+          <label for="factor2">Doug-adjacent matter</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="factor3">
+          <label for="factor3">Affects Doug's interests</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="factor4">
+          <label for="factor4">Doug mentioned in pleadings</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-number">Page 1 of 2</div>
+</div>
+
+<div class="paper">
+  <div class="form-id">Form D-302 (Rev. 2025)</div>
+  
+  <div class="form-section">
+    <div class="form-field">
+      <label>6. Doug-Impact Analysis:</label>
+      <textarea placeholder="Describe how this case may impact Doug's authority or interests..."></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>7. Proposed Doug-Relevance Rating:</label>
+      <div class="checkbox-grid">
+        <div class="checkbox-item">
+          <input type="checkbox" id="rating1">
+          <label for="rating1">Critical (Doug-essential)</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="rating2">
+          <label for="rating2">High (Doug-significant)</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="rating3">
+          <label for="rating3">Medium (Doug-related)</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="rating4">
+          <label for="rating4">Low (Doug-minimal)</label>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label>8. Certification:</label>
+      <p>I hereby certify that the information provided in this Doug-Relevance Assessment is true and accurate to the best of my knowledge. I understand that providing false information regarding Doug-relevance is a serious offense punishable by Doug-contempt proceedings.</p>
+    </div>
+
+    <div class="form-field">
+      <label>Attorney of Record:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>Doug Bar Number:</label>
+      <input type="text">
+    </div>
+
+    <div class="signature-field">
+      Signature and Date
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>FILING INSTRUCTIONS:</strong> This form must be filed with the initial civil complaint or within 5 Doug-days of case assignment. Submit original and three copies to the Civil Division of your local Doug Processing Center. A filing fee of 25 Doug-credits applies. Incomplete assessments will result in automatic case dismissal. If Doug-relevance rating is determined to be artificially inflated, sanctions may apply.</p>
+    <p>Form D-302 (Rev. 2025)</p>
+  </div>
+
+  <div class="page-number">Page 2 of 2</div>
+</div>
+
+</body>
+</html>

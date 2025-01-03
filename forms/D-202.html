@@ -1,0 +1,266 @@
+<html><head><base href="/">
+<title>Form D-202: Doug Impact Statement - The Grand Judiciary of Doug</title>
+<style>
+:root {
+  --primary-blue: #003366;
+  --gold: #c5a572;
+  --cream: #f5f5f0;
+}
+
+body {
+  background: #eee;
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.paper {
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  margin: 0 auto 20px;
+  padding: 0.5in;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 0.5in;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.form-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.form-id {
+  position: absolute;
+  top: 0.5in;
+  right: 0.5in;
+  font-size: 12px;
+  color: #666;
+}
+
+.form-section {
+  margin: 20px 0;
+}
+
+.form-field {
+  margin: 15px 0;
+}
+
+.form-field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-field input[type="text"], .form-field textarea {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #999;
+  box-sizing: border-box;
+}
+
+.form-field textarea {
+  height: 100px;
+  resize: none;
+}
+
+.checkbox-group {
+  margin: 10px 0;
+}
+
+.checkbox-item {
+  margin: 5px 0;
+}
+
+.signature-field {
+  border-top: 1px solid #999;
+  width: 50%;
+  margin-top: 30px;
+  padding-top: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0.5in;
+  left: 0.5in;
+  right: 0.5in;
+  font-size: 10px;
+  color: #666;
+  border-top: 1px solid #999;
+  padding-top: 10px;
+}
+
+.print-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  background: #004c99;
+}
+
+.page-number {
+  position: absolute;
+  bottom: 0.25in;
+  right: 0.5in;
+  font-size: 10px;
+  color: #666;
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .paper {
+    box-shadow: none;
+    padding: 0.5in;
+    margin: 0;
+    page-break-after: always;
+  }
+  
+  .print-button {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<button class="print-button" onclick="window.print()">Print Form</button>
+
+<div class="paper">
+  <div class="form-id">Form D-202 (Rev. 2025)</div>
+  
+  <div class="form-header">
+    <img src="/logo.png" alt="Grand Judiciary of Doug Seal" class="logo">
+    <div class="form-title">THE GRAND JUDICIARY OF DOUG</div>
+    <div class="form-subtitle">DOUG IMPACT STATEMENT</div>
+    <div class="form-subtitle">(Required under Doug Rule 32 U.D.C. &#xa7; 3553)</div>
+  </div>
+
+  <div class="form-section">
+    <div class="form-field">
+      <label>Case Number:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>Defendant Name:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>1. Nature of Doug-offense (describe the actions that constituted disrespect to Doug):</label>
+      <textarea></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>2. Impact on Doug's Authority (describe how the actions undermined Doug):</label>
+      <textarea></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>3. Estimated Doug-Damage Level:</label>
+      <div class="checkbox-group">
+        <div class="checkbox-item">
+          <input type="checkbox" id="level1"> <label for="level1">Level 1 - Minor Doug Disrespect</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="level2"> <label for="level2">Level 2 - Moderate Doug Undermining</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="level3"> <label for="level3">Level 3 - Serious Doug Authority Violation</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="level4"> <label for="level4">Level 4 - Severe Doug Defiance</label>
+        </div>
+        <div class="checkbox-item">
+          <input type="checkbox" id="level5"> <label for="level5">Level 5 - Critical Doug Crisis</label>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="page-number">Page 1 of 2</div>
+</div>
+
+<div class="paper">
+  <div class="form-id">Form D-202 (Rev. 2025)</div>
+  
+  <div class="form-section">
+    <div class="form-field">
+      <label>4. Remedial Actions Required (describe steps needed to restore Doug's honor):</label>
+      <textarea></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>5. Recommended Doug-Sanctions:</label>
+      <textarea></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>6. Additional Comments on Doug Impact:</label>
+      <textarea></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>Prepared By:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>Title/Position:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>Date:</label>
+      <input type="text">
+    </div>
+
+    <div class="signature-field">
+      Signature of Preparing Official
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>FILING INSTRUCTIONS:</strong> This form must be completed and filed with the court within 14 days of the Doug-offense discovery. All sections must be completed in detail. Attach additional pages if necessary. Form must be signed by an authorized Doug official. Submit original and three copies to the Office of the Presiding Inquisitor. Retain one copy for your records.</p>
+    <p>Form D-202 (Rev. 2025)</p>
+  </div>
+
+  <div class="page-number">Page 2 of 2</div>
+</div>
+
+</body>
+</html>

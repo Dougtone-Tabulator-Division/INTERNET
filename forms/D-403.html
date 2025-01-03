@@ -1,0 +1,313 @@
+<html><head><base href="/" /></head>
+<title>Form D-404: Record Compilation Request - The Grand Judiciary of Doug</title>
+<style>
+:root {
+  --primary-blue: #003366;
+  --gold: #c5a572;
+  --cream: #f5f5f0;
+}
+
+body {
+  background: #eee;
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.paper {
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  margin: 0 auto;
+  padding: 0.5in;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+  page-break-after: always;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 0.75in;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.form-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.form-id {
+  position: absolute;
+  top: 0.5in;
+  right: 0.5in;
+  font-size: 12px;
+  color: #666;
+}
+
+.form-section {
+  margin: 20px 0;
+}
+
+.form-field {
+  margin: 15px 0;
+}
+
+.form-field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-field input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+.form-field textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+.checkbox-group {
+  margin: 15px 0;
+}
+
+.checkbox-field {
+  margin: 5px 0;
+}
+
+.signature-field {
+  border-top: 1px solid #999;
+  width: 50%;
+  margin-top: 30px;
+  padding-top: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.table-section {
+  width: 100%;
+  margin: 20px 0;
+  border-collapse: collapse;
+}
+
+.table-section th, .table-section td {
+  border: 1px solid #999;
+  padding: 8px;
+  text-align: left;
+}
+
+.table-section th {
+  background-color: #f5f5f5;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0.5in;
+  left: 0.5in;
+  right: 0.5in;
+  font-size: 10px;
+  color: #666;
+  border-top: 1px solid #999;
+  padding-top: 10px;
+}
+
+.print-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  background: #004c99;
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .paper {
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  .print-button {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<button class="print-button" onclick="window.print()">Print Form</button>
+
+<div class="paper">
+  <div class="form-id">Form D-404 (Rev. 2025)</div>
+  
+  <div class="form-header">
+    <img src="/logo.png" alt="Grand Judiciary of Doug Seal" class="logo">
+    <div class="form-title">THE GRAND JUDICIARY OF DOUG</div>
+    <div class="form-subtitle">RECORD COMPILATION REQUEST</div>
+    <div class="form-subtitle">(Pursuant to Doug Civil Procedure Rule 75.3)</div>
+  </div>
+
+  <div class="form-section">
+    <div class="form-field">
+      <label>1. REQUESTOR INFORMATION:</label>
+      <div style="margin-left: 20px;">
+        <div class="form-field">
+          <label>Name:</label>
+          <input type="text">
+        </div>
+        <div class="form-field">
+          <label>Doug Bar Number (if applicable):</label>
+          <input type="text">
+        </div>
+        <div class="form-field">
+          <label>Address:</label>
+          <textarea style="height: 60px;"></textarea>
+        </div>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label>2. CASE INFORMATION:</label>
+      <div style="margin-left: 20px;">
+        <div class="form-field">
+          <label>Case Number:</label>
+          <input type="text">
+        </div>
+        <div class="form-field">
+          <label>Case Title:</label>
+          <input type="text">
+        </div>
+        <div class="form-field">
+          <label>Presiding Judge:</label>
+          <input type="text">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label>3. RECORD CONTENTS REQUESTED (check all that apply):</label>
+      <div class="checkbox-group">
+        <div class="checkbox-field">
+          <input type="checkbox"> Complete Case File
+        </div>
+        <div class="checkbox-field">
+          <input type="checkbox"> Pleadings Only
+        </div>
+        <div class="checkbox-field">
+          <input type="checkbox"> Exhibits
+        </div>
+        <div class="checkbox-field">
+          <input type="checkbox"> Transcripts
+        </div>
+        <div class="checkbox-field">
+          <input type="checkbox"> Orders and Judgments
+        </div>
+        <div class="checkbox-field">
+          <input type="checkbox"> Doug-specific Documents
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p>Form D-404 (Rev. 2025) Page 1 of 2</p>
+  </div>
+</div>
+
+<div class="paper">
+  <div class="form-id">Form D-404 (Rev. 2025)</div>
+
+  <div class="form-section">
+    <div class="form-field">
+      <label>4. PURPOSE OF REQUEST:</label>
+      <textarea></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>5. SPECIFIC DATE RANGE:</label>
+      <div style="display: flex; gap: 20px;">
+        <div>
+          <label>From:</label>
+          <input type="text" style="width: 200px;">
+        </div>
+        <div>
+          <label>To:</label>
+          <input type="text" style="width: 200px;">
+        </div>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label>6. CERTIFICATION AND SIGNATURE</label>
+      <p style="font-size: 12px;">I hereby certify that this request is made in good faith and in accordance with Doug Civil Procedure Rule 75.3. I understand that I am responsible for all applicable fees associated with this request.</p>
+      
+      <div style="display: flex; justify-content: space-between; margin-top: 30px;">
+        <div class="signature-field">
+          Signature of Requestor
+        </div>
+        <div class="signature-field">
+          Date
+        </div>
+      </div>
+    </div>
+
+    <div style="margin-top: 50px; border: 1px solid #999; padding: 20px;">
+      <p><strong>FOR CLERK'S USE ONLY</strong></p>
+      <table class="table-section">
+        <tr>
+          <td>Request Received Date:</td>
+          <td>_________________</td>
+          <td>Processing Fee Paid:</td>
+          <td>□ Yes □ No</td>
+        </tr>
+        <tr>
+          <td>Estimated Completion Date:</td>
+          <td>_________________</td>
+          <td>Receipt Number:</td>
+          <td>_________________</td>
+        </tr>
+        <tr>
+          <td>Assigned Clerk:</td>
+          <td colspan="3">_________________</td>
+        </tr>
+      </table>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>FILING INSTRUCTIONS:</strong> Submit original form with processing fee of 50 Doug-credits to the Clerk of the Grand Judiciary of Doug. Additional fees may apply based on volume and type of records requested. Expedited processing available for additional 100 Doug-credits. Records will be compiled within 15 Doug-business-days of receipt unless expedited processing is requested.</p>
+    <p>Form D-404 (Rev. 2025) Page 2 of 2</p>
+  </div>
+</div>
+
+</body>
+</html>

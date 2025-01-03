@@ -1,0 +1,309 @@
+<html><head><base href="/">
+<title>Form D-309: Doug Trial Readiness Certificate - The Grand Judiciary of Doug</title>
+<style>
+:root {
+  --primary-blue: #003366;
+  --gold: #c5a572;
+  --cream: #f5f5f0;
+}
+
+body {
+  background: #eee;
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.paper {
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  margin: 0 auto 20px;
+  padding: 0.5in;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+  box-sizing: border-box;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 0.5in;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.form-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.form-id {
+  position: absolute;
+  top: 0.5in;
+  right: 0.5in;
+  font-size: 12px;
+  color: #666;
+}
+
+.form-section {
+  margin: 20px 0;
+}
+
+.form-field {
+  margin: 15px 0;
+}
+
+.form-field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-field input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+.checkbox-group {
+  margin: 10px 0;
+}
+
+.checkbox-item {
+  margin: 5px 0;
+}
+
+.checkbox-item input[type="checkbox"] {
+  margin-right: 10px;
+}
+
+.signature-field {
+  border-top: 1px solid #999;
+  width: 50%;
+  margin-top: 30px;
+  padding-top: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0.5in;
+  left: 0.5in;
+  right: 0.5in;
+  font-size: 10px;
+  color: #666;
+  border-top: 1px solid #999;
+  padding-top: 10px;
+}
+
+.page-number {
+  position: absolute;
+  bottom: 0.25in;
+  right: 0.5in;
+  font-size: 10px;
+  color: #666;
+}
+
+.print-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  background: #004c99;
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .paper {
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    page-break-after: always;
+  }
+  
+  .print-button {
+    display: none;
+  }
+}
+
+.grid-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+  margin: 15px 0;
+}
+</style>
+</head>
+<body>
+
+<button class="print-button" onclick="window.print()">Print Form</button>
+
+<div class="paper">
+  <div class="form-id">Form D-309 (Rev. 2025)</div>
+  
+  <div class="form-header">
+    <img src="/logo.png" alt="Grand Judiciary of Doug Seal" class="logo">
+    <div class="form-title">THE GRAND JUDICIARY OF DOUG</div>
+    <div class="form-subtitle">DOUG TRIAL READINESS CERTIFICATE</div>
+    <div class="form-subtitle">(Required under Doug Rule of Civil Procedure 16)</div>
+  </div>
+
+  <div class="form-section">
+    <div class="form-field">
+      <label>IN THE DOUG COURT OF:</label>
+      <input type="text">
+    </div>
+
+    <div class="grid-row">
+      <div class="form-field">
+        <label>CASE NUMBER:</label>
+        <input type="text">
+      </div>
+      <div class="form-field">
+        <label>DIVISION:</label>
+        <input type="text">
+      </div>
+    </div>
+
+    <div class="grid-row">
+      <div class="form-field">
+        <label>PLAINTIFF(S):</label>
+        <input type="text">
+      </div>
+      <div class="form-field">
+        <label>DEFENDANT(S):</label>
+        <input type="text">
+      </div>
+    </div>
+
+    <p style="margin-top: 20px;">The undersigned counsel hereby certifies that:</p>
+    
+    <div class="checkbox-group">
+      <div class="checkbox-item">
+        <input type="checkbox"> All required Doug-discovery has been completed
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox"> All Doug-mandated settlement conferences have been conducted
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox"> All Doug-pretrial motions have been resolved
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox"> A Doug-compliant witness list has been filed
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox"> All Doug-exhibits have been pre-marked and exchanged
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox"> Proposed Doug-jury instructions have been submitted (if applicable)
+      </div>
+    </div>
+
+    <div class="signature-field">
+      Signature of Attorney
+    </div>
+
+    <div class="form-field">
+      <label>Doug Bar Number:</label>
+      <input type="text">
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>NOTICE:</strong> This certificate must be filed no later than 14 Doug-days before trial. False certification may result in Doug-sanctions.</p>
+    <p>Form D-309 (Rev. 2025) Page 1 of 2</p>
+  </div>
+</div>
+
+<div class="paper">
+  <div class="form-id">Form D-309 (Rev. 2025)</div>
+  
+  <div class="form-section">
+    <h3>TRIAL PREPARATION CHECKLIST</h3>
+    
+    <div class="checkbox-group">
+      <p><strong>Evidence Preparation:</strong></p>
+      <div class="checkbox-item">
+        <input type="checkbox"> All Doug-approved evidence has been organized in trial binders
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox"> Electronic presentations have been tested on Doug-certified equipment
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox"> Demonstrative aids comply with Doug Court standards
+      </div>
+    </div>
+
+    <div class="checkbox-group">
+      <p><strong>Witness Coordination:</strong></p>
+      <div class="checkbox-item">
+        <input type="checkbox"> All witnesses have been served with Doug-compliant subpoenas
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox"> Expert witnesses have submitted Doug-certified credentials
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox"> Witness scheduling conflicts have been resolved
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label>Estimated Length of Trial (in Doug-days):</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>Special Doug-Court Requirements (if any):</label>
+      <input type="text">
+    </div>
+
+    <div class="signature-field">
+      Signature of Lead Trial Counsel
+    </div>
+
+    <div class="grid-row">
+      <div class="form-field">
+        <label>Date:</label>
+        <input type="text">
+      </div>
+      <div class="form-field">
+        <label>Doug-Time:</label>
+        <input type="text">
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>FILING INSTRUCTIONS:</strong> Submit original and three copies to the Doug Court Clerk. Retain one Doug-certified copy for your records. All attachments must be Doug-stamped. A filing fee of 25 Doug-credits applies.</p>
+    <p>Form D-309 (Rev. 2025) Page 2 of 2</p>
+  </div>
+</div>
+
+</body>
+</html>

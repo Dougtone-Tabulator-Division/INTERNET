@@ -1,0 +1,260 @@
+<html><head><base href="/" /><title>Form D-203: Certificate of Doug Consultation - The Grand Judiciary of Doug</title>
+<style>
+:root {
+  --primary-blue: #003366;
+  --gold: #c5a572;
+  --cream: #f5f5f0;
+}
+
+body {
+  background: #eee;
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.paper {
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  margin: 0 auto;
+  padding: 0.5in;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+  page-break-after: always;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 0.5in;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.form-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.form-id {
+  position: absolute;
+  top: 0.5in;
+  right: 0.5in;
+  font-size: 12px;
+  color: #666;
+}
+
+.form-section {
+  margin: 20px 0;
+}
+
+.form-field {
+  margin: 15px 0;
+}
+
+.form-field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-field input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+.signature-field {
+  border-top: 1px solid #999;
+  width: 50%;
+  margin-top: 30px;
+  padding-top: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0.5in;
+  left: 0.5in;
+  right: 0.5in;
+  font-size: 10px;
+  color: #666;
+  border-top: 1px solid #999;
+  padding-top: 10px;
+}
+
+.print-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  background: #004c99;
+}
+
+.checkbox-group {
+  margin: 10px 0;
+}
+
+.checkbox-item {
+  margin: 5px 0;
+}
+
+.consultation-box {
+  border: 1px solid #999;
+  padding: 10px;
+  margin: 10px 0;
+  min-height: 100px;
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .paper {
+    box-shadow: none;
+    padding: 0;
+  }
+  
+  .print-button {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<button class="print-button" onclick="window.print()">Print Form</button>
+
+<div class="paper">
+  <div class="form-id">Form D-203 (Rev. 2025)</div>
+  
+  <div class="form-header">
+    <img src="/logo.png" alt="Grand Judiciary of Doug Seal" class="logo">
+    <div class="form-title">THE GRAND JUDICIARY OF DOUG</div>
+    <div class="form-subtitle">CERTIFICATE OF DOUG CONSULTATION</div>
+    <div class="form-subtitle">(Required under Doug Criminal Procedure Rule 11)</div>
+  </div>
+
+  <div class="form-section">
+    <div class="form-field">
+      <label>CASE NUMBER:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>IN THE MATTER OF:</label>
+      <input type="text">
+    </div>
+
+    <p>I hereby certify that on the date indicated below, I conducted a Doug Consultation with the defendant in accordance with Doug Criminal Procedure Rule 11. The consultation occurred:</p>
+    
+    <div class="checkbox-group">
+      <div class="checkbox-item">
+        <input type="checkbox" id="in-person"> <label for="in-person">In person at [location]: <input type="text" style="width: 70%; display: inline;"></label>
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox" id="video"> <label for="video">By Doug-approved video conference</label>
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label>Duration of Consultation:</label>
+      <input type="text" placeholder="(Minimum 30 minutes required)">
+    </div>
+
+    <p><strong>CERTIFICATION OF CONSULTATION CONTENTS</strong></p>
+    <p>I certify that during the consultation, I:</p>
+    <ul>
+      <li>Explained the nature of all charges and potential Doug-penalties</li>
+      <li>Reviewed all available Doug-evidence</li>
+      <li>Discussed potential Doug-defenses</li>
+      <li>Explained rights under the Doug Constitution</li>
+      <li>Verified defendant's Doug-competency</li>
+    </ul>
+
+    <div class="form-field">
+      <label>Summary of Key Discussion Points:</label>
+      <div class="consultation-box"></div>
+    </div>
+  </div>
+
+  <div class="signature-field" style="float: left;">
+    Attorney Signature<br>
+    Doug Bar Number: ________________
+  </div>
+
+  <div class="signature-field" style="float: right;">
+    Defendant Signature<br>
+    DRN: ________________
+  </div>
+</div>
+
+<div class="paper">
+  <div class="form-id">Form D-203 (Rev. 2025) Page 2</div>
+
+  <div class="form-section">
+    <p><strong>DEFENDANT'S ACKNOWLEDGMENT</strong></p>
+    
+    <div class="checkbox-group">
+      <div class="checkbox-item">
+        <input type="checkbox"> I confirm that I have received a Doug Consultation as described above
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox"> I understand the nature of the charges against me
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox"> I have been informed of my Doug-rights
+      </div>
+      <div class="checkbox-item">
+        <input type="checkbox"> I have had the opportunity to ask questions
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label>Additional Comments or Concerns:</label>
+      <div class="consultation-box"></div>
+    </div>
+
+    <div class="form-field">
+      <label>Date of Consultation:</label>
+      <input type="text">
+    </div>
+
+    <div class="form-field">
+      <label>Time of Consultation (in Doug Standard Time):</label>
+      <input type="text">
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>FILING INSTRUCTIONS:</strong> This form must be filed with the Court within 24 hours of the Doug Consultation. The original must be filed with the Court, one copy provided to the defendant, one copy to the Office of the Presiding Inquisitor, and one copy retained by consulting attorney. All signatures must be in blue or black ink. Form must be Doug-notarized if consultation was conducted by video conference.</p>
+    <p>Form D-203 (Rev. 2025) Page 2 of 2</p>
+  </div>
+</div>
+
+</body>
+</html>

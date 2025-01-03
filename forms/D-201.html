@@ -1,0 +1,252 @@
+<html><head><base href="/">
+<title>Form D-201: Criminal Information and Complaint - The Grand Judiciary of Doug</title>
+<style>
+:root {
+  --primary-blue: #003366;
+  --gold: #c5a572;
+  --cream: #f5f5f0;
+}
+
+body {
+  background: #eee;
+  font-family: 'Times New Roman', serif;
+  margin: 0;
+  padding: 20px;
+}
+
+.paper {
+  background: white;
+  width: 8.5in;
+  min-height: 11in;
+  margin: 0 auto 20px;
+  padding: 0.5in;
+  box-shadow: 0 0 10px rgba(0,0,0,0.1);
+  position: relative;
+}
+
+.form-header {
+  text-align: center;
+  margin-bottom: 0.5in;
+}
+
+.logo {
+  width: 100px;
+  height: 100px;
+  display: block;
+  margin: 0 auto 20px;
+}
+
+.form-title {
+  font-size: 18px;
+  font-weight: bold;
+  margin: 10px 0;
+  text-align: center;
+}
+
+.form-subtitle {
+  font-size: 14px;
+  margin: 5px 0;
+  text-align: center;
+}
+
+.form-id {
+  position: absolute;
+  top: 0.5in;
+  right: 0.5in;
+  font-size: 12px;
+  color: #666;
+}
+
+.form-section {
+  margin: 20px 0;
+}
+
+.form-field {
+  margin: 15px 0;
+}
+
+.form-field label {
+  display: block;
+  font-weight: bold;
+  margin-bottom: 5px;
+}
+
+.form-field input[type="text"] {
+  width: 100%;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+.form-field textarea {
+  width: 100%;
+  height: 100px;
+  padding: 5px;
+  border: 1px solid #999;
+}
+
+.signature-field {
+  border-top: 1px solid #999;
+  width: 50%;
+  margin-top: 30px;
+  padding-top: 5px;
+  font-size: 12px;
+  text-align: center;
+}
+
+.footer {
+  position: absolute;
+  bottom: 0.5in;
+  left: 0.5in;
+  right: 0.5in;
+  font-size: 10px;
+  color: #666;
+  border-top: 1px solid #999;
+  padding-top: 10px;
+}
+
+.print-button {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  padding: 10px 20px;
+  background: var(--primary-blue);
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.print-button:hover {
+  background: #004c99;
+}
+
+.grid-2 {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 20px;
+}
+
+@media print {
+  body {
+    background: white;
+    padding: 0;
+  }
+  
+  .paper {
+    box-shadow: none;
+    padding: 0;
+    margin: 0;
+    page-break-after: always;
+  }
+  
+  .print-button {
+    display: none;
+  }
+}
+</style>
+</head>
+<body>
+
+<button class="print-button" onclick="window.print()">Print Form</button>
+
+<div class="paper">
+  <div class="form-id">Form D-201 (Rev. 2025) Page 1 of 2</div>
+  
+  <div class="form-header">
+    <img src="/logo.png" alt="Grand Judiciary of Doug Seal" class="logo">
+    <div class="form-title">THE GRAND JUDICIARY OF DOUG</div>
+    <div class="form-subtitle">CRIMINAL INFORMATION AND COMPLAINT</div>
+    <div class="form-subtitle">Office of the Presiding Inquisitor</div>
+  </div>
+
+  <div class="form-section">
+    <div class="grid-2">
+      <div class="form-field">
+        <label>District of Doug:</label>
+        <input type="text">
+      </div>
+      <div class="form-field">
+        <label>Case Number:</label>
+        <input type="text">
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label>THE GRAND JUDICIARY OF DOUG v.</label>
+      <input type="text" placeholder="Defendant's Full Legal Name">
+    </div>
+
+    <div class="grid-2">
+      <div class="form-field">
+        <label>Doug Registration Number (DRN):</label>
+        <input type="text">
+      </div>
+      <div class="form-field">
+        <label>Date of Birth:</label>
+        <input type="text">
+      </div>
+    </div>
+
+    <div class="form-field">
+      <label>CRIMINAL INFORMATION</label>
+      <p>The Presiding Inquisitor charges that:</p>
+      <textarea placeholder="State the essential facts constituting the offense(s) charged..."></textarea>
+    </div>
+
+    <div class="grid-2">
+      <div class="form-field">
+        <label>Primary Doug Code Violation:</label>
+        <input type="text">
+      </div>
+      <div class="form-field">
+        <label>Secondary Doug Code Violation(s):</label>
+        <input type="text">
+      </div>
+    </div>
+  </div>
+</div>
+
+<div class="paper">
+  <div class="form-id">Form D-201 (Rev. 2025) Page 2 of 2</div>
+
+  <div class="form-section">
+    <div class="form-field">
+      <label>SUPPORTING AFFIDAVIT</label>
+      <p>I, the undersigned Presiding Inquisitor, being duly sworn, state on information and belief:</p>
+      <textarea placeholder="Provide detailed factual basis for the charges..."></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>List of Supporting Evidence:</label>
+      <textarea placeholder="Enumerate all evidence to be presented..."></textarea>
+    </div>
+
+    <div class="form-field">
+      <label>Witnesses to be Called:</label>
+      <textarea placeholder="List all potential witnesses..."></textarea>
+    </div>
+
+    <div class="grid-2">
+      <div class="signature-field">
+        Presiding Inquisitor Signature
+      </div>
+      <div class="signature-field">
+        Date and Doug Standard Time
+      </div>
+    </div>
+
+    <div class="form-field" style="margin-top: 50px;">
+      <p><strong>SWORN AND SUBSCRIBED</strong> before me this ______ day of ____________, 20____</p>
+      <div class="signature-field">
+        Doug Magistrate/Notary
+      </div>
+    </div>
+  </div>
+
+  <div class="footer">
+    <p><strong>FILING INSTRUCTIONS:</strong> This form must be filed with the Clerk of the Grand Judiciary of Doug within 24 hours of the defendant's arrest or identification. All supporting evidence must be properly logged with the Office of Doug Evidence Control (Form D-205) prior to submission. Original plus three copies required. Service must be made on defendant or defendant's Doug-licensed attorney within 48 hours of filing.</p>
+  </div>
+</div>
+
+</body>
+</html>
