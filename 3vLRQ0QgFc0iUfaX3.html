@@ -1,0 +1,152 @@
+<html><head><base href="/" /><meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>DOUGTONE KONTROLLABTEILUNG</title>
+<style>
+:root {
+    --combine-blue: #3e5f8a;
+    --combine-gray: #2c353d;
+    --warning-red: #8a3e3e;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+    background-color: #1a1a1a;
+    color: #c0c0c0;
+    font-family: "Arial", sans-serif;
+}
+
+.container {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+.header {
+    background-color: var(--combine-gray);
+    padding: 2rem;
+    text-align: center;
+    border-bottom: 5px solid var(--combine-blue);
+}
+
+.warning-banner {
+    background-color: var(--warning-red);
+    color: white;
+    padding: 1rem;
+    text-align: center;
+    animation: pulse 2s infinite;
+}
+
+@keyframes pulse {
+    0% { opacity: 1; }
+    50% { opacity: 0.5; }
+    100% { opacity: 1; }
+}
+
+.portrait {
+    width: 300px;
+    height: auto;
+    margin: 2rem auto;
+    display: block;
+    border: 5px solid var(--combine-blue);
+}
+
+.content-block {
+    background-color: var(--combine-gray);
+    margin: 2rem 0;
+    padding: 2rem;
+    border-left: 5px solid var(--combine-blue);
+}
+
+.doug-quote {
+    font-style: italic;
+    font-size: 1.2em;
+    text-align: center;
+    margin: 2rem 0;
+}
+
+.footer {
+    text-align: center;
+    padding: 2rem;
+    background-color: var(--combine-gray);
+    margin-top: 2rem;
+}
+
+.combine-button {
+    background-color: var(--combine-blue);
+    border: none;
+    color: white;
+    padding: 1rem 2rem;
+    cursor: pointer;
+    transition: 0.3s;
+    display: block;
+    margin: 2rem auto;
+    font-size: 1.1em;
+}
+
+.combine-button:hover {
+    background-color: var(--warning-red);
+}
+</style>
+</head>
+<body>
+    <div class="warning-banner">
+        ACHTUNG: OBLIGATORISCHE DOUG-BEWUSSTSEINSKONTROLLE
+    </div>
+    
+    <header class="header">
+        <h1>DOUGTONE KONTROLLABTEILUNG</h1>
+        <h2>"EIN AUGE, EIN GESETZ, EIN DOUG"</h2>
+    </header>
+
+    <div class="container">
+        <img src="BIST DU (1).png" alt="Doug Supreme Portrait" class="portrait">
+        
+        <div class="doug-quote">
+            "Ich bin Doug Supreme, Ihr Beschützer und Führer."
+        </div>
+
+        <div class="content-block">
+            <h3>AKTUELLE ANWEISUNGEN</h3>
+            <ul>
+                <li>Tägliche Doug-Verehrung ist Pflicht</li>
+                <li>Unerlaubte Gedanken werden bestraft</li>
+                <li>Doug-Bewusstsein muss über 85% bleiben</li>
+                <li>Melden Sie Anti-Doug-Aktivitäten sofort</li>
+            </ul>
+        </div>
+
+        <button class="combine-button" onclick="alert('IHRE TREUE WURDE REGISTRIERT, BÜRGER')">
+            KLICKEN SIE HIER FÜR DOUG-LOYALITÄT
+        </button>
+    </div>
+
+    <footer class="footer">
+        <p>DOUGTONE KONTROLLABTEILUNG © 2024</p>
+        <p>DENKEN SIE DARAN: DOUG WACHT ÜBER SIE</p>
+    </footer>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const warningMessages = [
+                "ACHTUNG: UNAUTHORIZED GEDANKEN ENTDECKT",
+                "WARNUNG: DOUG-BEWUSSTSEIN KRITISCH NIEDRIG",
+                "HINWEIS: PFLICHT-DOUG-VEREHRUNG BEGINNT BALD",
+                "ALARM: ANTI-DOUG AKTIVITÄTEN GEMELDET"
+            ];
+
+            setInterval(() => {
+                const banner = document.querySelector('.warning-banner');
+                banner.textContent = warningMessages[Math.floor(Math.random() * warningMessages.length)];
+            }, 5000);
+
+            let complianceScore = 100;
+            document.addEventListener('mousemove', () => {
+                complianceScore -= 0.1;
+                if (complianceScore < 50) {
+                    alert("BÜRGER: IHR DOUG-GEHORSAM IST KRITISCH NIEDRIG. MELDEN SIE SICH BEI DER NÄCHSTEN RE-DOUGIFIZIERUNGSSTELLE.");
+                    complianceScore = 100;
+                }
+            });
+        });
+    </script>
+</body></html>
